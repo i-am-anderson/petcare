@@ -27,8 +27,13 @@ export const router = createBrowserRouter([
       { path: "pets/consulta", Component: PetList },
       { path: "funcionarios/cadastro", Component: EmployeeRegister },
       { path: "funcionarios/consulta", Component: EmployeeList },
+      { path: "checkin", Component: AppointmentCalendar },
+      { path: "ordens-servico", Component: AppointmentCalendar },
+      { path: "checkout", Component: AppointmentCalendar },
       { path: "agendamentos", Component: AppointmentCalendar },
       { path: "historico", Component: ServiceHistory },
+      { path: "historico-pets", Component: ServiceHistory },
+      { path: "financeiro", Component: ServiceHistory },
     ],
   },
 ]);
