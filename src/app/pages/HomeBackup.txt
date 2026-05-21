@@ -1,0 +1,131 @@
+import { Link } from "react-router";
+import { 
+  Users, PawPrint, UserCog, Calendar, FileText, Plus, 
+  Search, ClipboardList, LogIn, LogOut, Wallet, History 
+} from "lucide-react";
+
+export function Home() {
+  return (
+    <div className="p-6">
+      <div className="mb-8">
+        <h1 className="text-3xl font-bold text-slate-900">Sistema de Gestão Pet Care</h1>
+        <p className="text-slate-600 mt-2">Gerencie clientes, pets, funcionários e operações diárias</p>
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {/* --- CLIENTES --- */}
+        <Link to="/clientes/cadastro" className="bg-white p-6 rounded-lg shadow-sm border border-slate-200 hover:shadow-md transition-shadow">
+          <div className="flex items-center gap-3 mb-3">
+            <div className="p-3 bg-blue-100 rounded-lg"><Users className="h-6 w-6 text-blue-600" /></div>
+            <h2 className="text-xl font-semibold text-slate-900">Novo Cliente</h2>
+          </div>
+          <p className="text-slate-600 mb-4">Cadastre novos tutores no sistema.</p>
+          <div className="flex items-center text-blue-600 gap-2"><Plus className="h-4 w-4" /><span>Cadastrar</span></div>
+        </Link>
+
+        <Link to="/clientes/consulta" className="bg-white p-6 rounded-lg shadow-sm border border-slate-200 hover:shadow-md transition-shadow">
+          <div className="flex items-center gap-3 mb-3">
+            <div className="p-3 bg-blue-50 rounded-lg"><Search className="h-6 w-6 text-blue-500" /></div>
+            <h2 className="text-xl font-semibold text-slate-900">Consultar Clientes</h2>
+          </div>
+          <p className="text-slate-600 mb-4">Lista, edição e busca de tutores.</p>
+          <div className="flex items-center text-blue-500 gap-2"><Search className="h-4 w-4" /><span>Buscar</span></div>
+        </Link>
+
+        {/* --- PETS --- */}
+        <Link to="/pets/cadastro" className="bg-white p-6 rounded-lg shadow-sm border border-slate-200 hover:shadow-md transition-shadow">
+          <div className="flex items-center gap-3 mb-3">
+            <div className="p-3 bg-green-100 rounded-lg"><PawPrint className="h-6 w-6 text-green-600" /></div>
+            <h2 className="text-xl font-semibold text-slate-900">Novo Pet</h2>
+          </div>
+          <p className="text-slate-600 mb-4">Adicione um novo pet a um cliente.</p>
+          <div className="flex items-center text-green-600 gap-2"><Plus className="h-4 w-4" /><span>Cadastrar</span></div>
+        </Link>
+
+        <Link to="/pets/consulta" className="bg-white p-6 rounded-lg shadow-sm border border-slate-200 hover:shadow-md transition-shadow">
+          <div className="flex items-center gap-3 mb-3">
+            <div className="p-3 bg-green-50 rounded-lg"><Search className="h-6 w-6 text-green-500" /></div>
+            <h2 className="text-xl font-semibold text-slate-900">Consultar Pets</h2>
+          </div>
+          <p className="text-slate-600 mb-4">Gerencie os prontuários dos animais.</p>
+          <div className="flex items-center text-green-500 gap-2"><Search className="h-4 w-4" /><span>Ver todos</span></div>
+        </Link>
+
+        {/* --- OPERACIONAL --- */}
+        <Link to="/checkin" className="bg-white p-6 rounded-lg shadow-sm border border-slate-200 hover:shadow-md transition-shadow">
+          <div className="flex items-center gap-3 mb-3">
+            <div className="p-3 bg-cyan-100 rounded-lg"><LogIn className="h-6 w-6 text-cyan-600" /></div>
+            <h2 className="text-xl font-semibold text-slate-900">Check-In</h2>
+          </div>
+          <p className="text-slate-600 mb-4">Entrada de animais na unidade.</p>
+          <div className="flex items-center text-cyan-600 gap-2"><LogIn className="h-4 w-4" /><span>Iniciar Entrada</span></div>
+        </Link>
+
+        <Link to="/ordem-servico" className="bg-white p-6 rounded-lg shadow-sm border border-slate-200 hover:shadow-md transition-shadow">
+          <div className="flex items-center gap-3 mb-3">
+            <div className="p-3 bg-yellow-100 rounded-lg"><ClipboardList className="h-6 w-6 text-yellow-700" /></div>
+            <h2 className="text-xl font-semibold text-slate-900">Ordem de Serviço</h2>
+          </div>
+          <p className="text-slate-600 mb-4">Gerencie serviços em execução.</p>
+          <div className="flex items-center text-yellow-700 gap-2"><ClipboardList className="h-4 w-4" /><span>Ver Ordens</span></div>
+        </Link>
+
+        <Link to="/checkout" className="bg-white p-6 rounded-lg shadow-sm border border-slate-200 hover:shadow-md transition-shadow">
+          <div className="flex items-center gap-3 mb-3">
+            <div className="p-3 bg-rose-100 rounded-lg"><LogOut className="h-6 w-6 text-rose-600" /></div>
+            <h2 className="text-xl font-semibold text-slate-900">Check-Out</h2>
+          </div>
+          <p className="text-slate-600 mb-4">Saída e finalização de estadias.</p>
+          <div className="flex items-center text-rose-600 gap-2"><LogOut className="h-4 w-4" /><span>Finalizar</span></div>
+        </Link>
+
+        {/* --- AGENDAMENTO E HISTÓRICO --- */}
+        <Link to="/agendamentos" className="bg-white p-6 rounded-lg shadow-sm border border-slate-200 hover:shadow-md transition-shadow">
+          <div className="flex items-center gap-3 mb-3">
+            <div className="p-3 bg-orange-100 rounded-lg"><Calendar className="h-6 w-6 text-orange-600" /></div>
+            <h2 className="text-xl font-semibold text-slate-900">Agendamentos</h2>
+          </div>
+          <p className="text-slate-600 mb-4">Calendário de banho, tosa e consultas.</p>
+          <div className="flex items-center text-orange-600 gap-2"><Calendar className="h-4 w-4" /><span>Ver Agenda</span></div>
+        </Link>
+
+        <Link to="/historico-pets" className="bg-white p-6 rounded-lg shadow-sm border border-slate-200 hover:shadow-md transition-shadow">
+          <div className="flex items-center gap-3 mb-3">
+            <div className="p-3 bg-indigo-100 rounded-lg"><History className="h-6 w-6 text-indigo-600" /></div>
+            <h2 className="text-xl font-semibold text-slate-900">Histórico Pets</h2>
+          </div>
+          <p className="text-slate-600 mb-4">Linha do tempo de saúde dos animais.</p>
+          <div className="flex items-center text-indigo-600 gap-2"><History className="h-4 w-4" /><span>Ver Linha do Tempo</span></div>
+        </Link>
+
+        {/* --- GESTÃO --- */}
+        <Link to="/funcionarios/consulta" className="bg-white p-6 rounded-lg shadow-sm border border-slate-200 hover:shadow-md transition-shadow">
+          <div className="flex items-center gap-3 mb-3">
+            <div className="p-3 bg-purple-100 rounded-lg"><UserCog className="h-6 w-6 text-purple-600" /></div>
+            <h2 className="text-xl font-semibold text-slate-900">Equipe</h2>
+          </div>
+          <p className="text-slate-600 mb-4">Gerencie sua equipe e permissões.</p>
+          <div className="flex items-center text-purple-600 gap-2"><Search className="h-4 w-4" /><span>Ver Funcionários</span></div>
+        </Link>
+
+        <Link to="/financeiro" className="bg-white p-6 rounded-lg shadow-sm border border-slate-200 hover:shadow-md transition-shadow">
+          <div className="flex items-center gap-3 mb-3">
+            <div className="p-3 bg-emerald-100 rounded-lg"><Wallet className="h-6 w-6 text-emerald-600" /></div>
+            <h2 className="text-xl font-semibold text-slate-900">Financeiro</h2>
+          </div>
+          <p className="text-slate-600 mb-4">Fluxo de caixa e faturamento.</p>
+          <div className="flex items-center text-emerald-600 gap-2"><Wallet className="h-4 w-4" /><span>Painel Financeiro</span></div>
+        </Link>
+
+        <Link to="/historico" className="bg-white p-6 rounded-lg shadow-sm border border-slate-200 hover:shadow-md transition-shadow">
+          <div className="flex items-center gap-3 mb-3">
+            <div className="p-3 bg-slate-100 rounded-lg"><FileText className="h-6 w-6 text-slate-600" /></div>
+            <h2 className="text-xl font-semibold text-slate-900">Relatórios</h2>
+          </div>
+          <p className="text-slate-600 mb-4">Relatório geral e exportação de dados.</p>
+          <div className="flex items-center text-slate-600 gap-2"><FileText className="h-4 w-4" /><span>Ver Relatórios</span></div>
+        </Link>
+      </div>
+    </div>
+  );
+}
