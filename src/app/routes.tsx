@@ -9,14 +9,13 @@ import { EmployeeRegister } from "./pages/EmployeeRegister";
 import { EmployeeList } from "./pages/EmployeeList";
 import { AppointmentCalendar } from "./pages/AppointmentCalendar";
 import { ServiceHistory } from "./pages/ServiceHistory";
-import { CheckIn } from "./pages/CheckIn";
-import { ServiceOrderPage } from "./pages/ServiceOrderPage";
-import { CheckOut } from "./pages/CheckOut";
-import { FinancialDashboard } from "./pages/FinancialDashboard";
-import { PetHistory } from "./pages/PetHistory";
-
+import { Login } from "./pages/Login";
 
 export const router = createBrowserRouter([
+  {
+    path: "/login",
+    Component: Login,
+  },
   {
     path: "/",
     Component: Layout,
@@ -30,11 +29,6 @@ export const router = createBrowserRouter([
       { path: "funcionarios/consulta", Component: EmployeeList },
       { path: "agendamentos", Component: AppointmentCalendar },
       { path: "historico", Component: ServiceHistory },
-      { path: "checkin", Component: CheckIn },
-      { path: "ordem-servico", Component: ServiceOrderPage },
-      { path: "checkout", Component: CheckOut },
-      { path: "financeiro", Component: FinancialDashboard },
-      { path: "historico-pets", Component: PetHistory },
     ],
   },
 ]);
