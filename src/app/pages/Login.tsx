@@ -39,7 +39,7 @@ export function Login() {
             </div>
             <div className="text-center">
               <h1 className="text-xl font-bold text-white tracking-tight">
-                Pet<span className="text-blue-200">Care</span>
+                PI!<span className="text-blue-200">Pet</span>
               </h1>
               <p className="text-blue-200 text-xs mt-0.5 font-medium tracking-wide uppercase">
                 Sistema Interno

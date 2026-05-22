@@ -29,7 +29,7 @@ export function Layout() {
                 <PawPrint className="h-5 w-5 text-white" />
               </div>
               <span className="text-lg font-bold text-slate-900 tracking-tight">
-                Pet<span className="text-blue-600">Care</span>
+                PI!<span className="text-blue-600">Pet</span>
               </span>
             </Link>
 

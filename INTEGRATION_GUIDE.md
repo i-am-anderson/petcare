@@ -1,4 +1,4 @@
-# Guia de Integração — Novos Módulos Pet Care
+# Guia de Integração — Novos Módulos PI!Pet
 
 ## Arquivos entregues
 

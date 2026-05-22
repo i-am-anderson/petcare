@@ -2,7 +2,7 @@
   {
     "id": "e1b2c3d4-f5a6-7b8c-9d0e-1f2a3b4c5d6e",
     "name": "João Lemes",
-    "email": "joao.lemes@petcare.com.br",
+    "email": "joao.lemes@pipet.com.br",
     "phone": "(11) 97766-5544",
     "cpf": "321.654.987-01",
     "birthdate": "1988-04-12",
@@ -17,7 +17,7 @@
   {
     "id": "f2a3b4c5-d6e7-8f9a-0b1c-2d3e4f5a6b7c",
     "name": "Roberto Justino Antunes",
-    "email": "roberto.antunes@petcare.com.br",
+    "email": "roberto.antunes@pipet.com.br",
     "phone": "(11) 98877-6655",
     "cpf": "456.123.789-12",
     "birthdate": "1995-09-22",
@@ -32,7 +32,7 @@
   {
     "id": "a3b4c5d6-e7f8-9a0b-1c2d-3e4f5a6b7c8d",
     "name": "Camila Ribeiro Alves",
-    "email": "camila.alves@petcare.com.br",
+    "email": "camila.alves@pipet.com.br",
     "phone": "(11) 99911-2233",
     "cpf": "789.456.123-34",
     "birthdate": "2001-06-05",
@@ -47,7 +47,7 @@
   {
     "id": "b4c5d6e7-f8a9-0b1c-2d3e-4f5a6b7c8d9e",
     "name": "Lucas Gabriel Costa",
-    "email": "lucas.costa@petcare.com.br",
+    "email": "lucas.costa@pipet.com.br",
     "phone": "(11) 98122-3344",
     "cpf": "159.753.486-25",
     "birthdate": "2003-03-18",
@@ -62,7 +62,7 @@
   {
     "id": "c5d6e7f8-a9b0-1c2d-3e4f-5a6b7c8d9e0f",
     "name": "Juliana das Dores Neves",
-    "email": "juliana.neves@petcare.com.br",
+    "email": "juliana.neves@pipet.com.br",
     "phone": "(11) 99544-8877",
     "cpf": "258.147.369-58",
     "birthdate": "1997-11-30",
@@ -77,7 +77,7 @@
   {
     "id": "d6e7f8a9-b0c1-2d3e-4f5a-6b7c8d9e0f1a",
     "name": "Bruno Henrique Fagundes",
-    "email": "bruno.fagundes@petcare.com.br",
+    "email": "bruno.fagundes@pipet.com.br",
     "phone": "(11) 98233-7766",
     "cpf": "951.357.258-47",
     "birthdate": "1999-07-14",
@@ -92,7 +92,7 @@
   {
     "id": "e7f8a9b0-c1d2-3e4f-5a6b-7c8d9e0f1a2b",
     "name": "Rodrigo Silva Prado",
-    "email": "rodrigo.prado@petcare.com.br",
+    "email": "rodrigo.prado@pipet.com.br",
     "phone": "(11) 99144-5522",
     "cpf": "123.987.456-65",
     "birthdate": "1992-01-25",
@@ -107,7 +107,7 @@
   {
     "id": "f8a9b0c1-d2e3-4f5a-6b7c-8d9e0f1a2b3c",
     "name": "Amanda Vieira Lima",
-    "email": "amanda.lima@petcare.com.br",
+    "email": "amanda.lima@pipet.com.br",
     "phone": "(11) 97311-8899",
     "cpf": "741.852.963-12",
     "birthdate": "1994-10-08",
@@ -137,7 +137,7 @@
   {
     "id": "b0c1d2e3-f4a5-5b6c-7d8e-9f0a1b2c3d4e",
     "name": "Dra. Beatriz Mendes Castro",
-    "email": "beatriz.veterinaria@petcare.com.br",
+    "email": "beatriz.veterinaria@pipet.com.br",
     "phone": "(11) 99622-4488",
     "cpf": "147.258.369-00",
     "birthdate": "1985-12-03",
