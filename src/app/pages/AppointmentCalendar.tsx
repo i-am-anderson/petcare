@@ -153,7 +153,7 @@ export function AppointmentCalendar() {
 
               <div className="mb-6">
                 <h3 className="font-semibold text-slate-900 mb-3">Agendamentos do dia</h3>
-                <div className="space-y-2">
+                <div className="space-y-2 h-[200px] overflow-y-scroll">
                   {getAppointmentsForDate(selectedDate).map((apt) => (
                     <div key={apt.id} className="bg-slate-50 rounded-lg p-3 border border-slate-200">
                       <div className="flex justify-between items-start">
