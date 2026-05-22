@@ -12,7 +12,6 @@ import { ServiceHistory } from "./pages/ServiceHistory";
 import { Login } from "./pages/Login";
 import { CheckIn } from "./pages/CheckIn";
 import { CheckOut } from "./pages/CheckOut";
-import { ServiceHistory } from "./pages/ServiceHistory";
 import { ServiceOrderPage } from "./pages/ServiceOrderPage";
 import { PetHistory } from "./pages/PetHistory";
 import { FinancialDashboard } from "./pages/FinancialDashboard";

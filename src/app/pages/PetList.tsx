@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router";
 import { useLocalStorage } from "../hooks/useLocalStorage";
 import { Pet } from "../types";
-import { Plus, Search, User, Trash2, ShieldCheck, Scissors } from "lucide-react";
+import { Plus, Search, User, Trash2, ShieldCheck, Scissors, Pencil, X } from "lucide-react";
 import { usePagination } from "../hooks/usePagination";
 import { Pagination } from "../components/ui/pagination";
 
@@ -20,6 +20,7 @@ const SPECIES_EMOJI: Record<string, string> = {
 export function PetList() {
   const [pets, setPets] = useLocalStorage<Pet[]>("pets", []);
   const [searchTerm, setSearchTerm] = useState("");
+  const [editingPet, setEditingPet] = useState<Pet | null>(null);
 
   const filteredPets = pets.filter(
     (pet) =>
@@ -36,6 +37,14 @@ export function PetList() {
     if (confirm("Tem certeza que deseja excluir este pet?")) {
       setPets(pets.filter((p) => p.id !== id));
     }
+  };
+
+  const handleEditSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!editingPet) return;
+
+    setPets(pets.map(p => p.id === editingPet.id ? editingPet : p));
+    setEditingPet(null);
   };
 
   return (
@@ -172,13 +181,22 @@ export function PetList() {
                       </div>
                     </td>
                     <td className="px-6 py-4">
-                      <button
-                        onClick={() => handleDelete(pet.id)}
-                        className="text-red-600 hover:text-red-800"
-                        title="Excluir pet"
-                      >
-                        <Trash2 className="h-4 w-4" />
-                      </button>
+                      <div className="flex items-center gap-3">
+                        <button
+                          onClick={() => setEditingPet(pet)}
+                          className="text-blue-600 hover:text-blue-800"
+                          title="Editar pet"
+                        >
+                          <Pencil className="h-4 w-4" />
+                        </button>
+                        <button
+                          onClick={() => handleDelete(pet.id)}
+                          className="text-red-600 hover:text-red-800"
+                          title="Excluir pet"
+                        >
+                          <Trash2 className="h-4 w-4" />
+                        </button>
+                      </div>
                     </td>
                   </tr>
                 ))
@@ -188,6 +206,122 @@ export function PetList() {
         </div>
         <Pagination {...pagination} onPageChange={pagination.goToPage} />
       </div>
+
+      {editingPet && (
+        <div className="fixed inset-0 bg-[#00000090] bg-opacity-50 flex items-center justify-center p-4 z-50">
+          <div className="bg-white rounded-lg shadow-xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+            <div className="p-6">
+              <div className="flex items-center justify-between mb-4">
+                <h2 className="text-2xl font-bold text-slate-900">
+                  Editar Pet
+                </h2>
+                <button onClick={() => setEditingPet(null)} className="text-slate-400 hover:text-slate-600">
+                  <X className="h-6 w-6" />
+                </button>
+              </div>
+
+              <form onSubmit={handleEditSubmit}>
+                <div className="space-y-4">
+                  <div className="grid grid-cols-2 gap-4">
+                    <div>
+                      <label className="block text-sm font-medium text-slate-700 mb-1">Nome *</label>
+                      <input
+                        type="text"
+                        required
+                        value={editingPet.name}
+                        onChange={(e) => setEditingPet({ ...editingPet, name: e.target.value })}
+                        className="w-full px-3 py-2 border border-slate-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-sm font-medium text-slate-700 mb-1">Espécie *</label>
+                      <select
+                        required
+                        value={editingPet.species}
+                        onChange={(e) => setEditingPet({ ...editingPet, species: e.target.value })}
+                        className="w-full px-3 py-2 border border-slate-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                      >
+                        <option value="">Selecione...</option>
+                        {Object.keys(SPECIES_EMOJI).map(sp => (
+                          <option key={sp} value={sp}>{sp}</option>
+                        ))}
+                      </select>
+                    </div>
+                  </div>
+
+                  <div className="grid grid-cols-3 gap-4">
+                    <div>
+                      <label className="block text-sm font-medium text-slate-700 mb-1">Raça</label>
+                      <input
+                        type="text"
+                        value={editingPet.breed || ""}
+                        onChange={(e) => setEditingPet({ ...editingPet, breed: e.target.value })}
+                        className="w-full px-3 py-2 border border-slate-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-sm font-medium text-slate-700 mb-1">Idade (anos)</label>
+                      <input
+                        type="number"
+                        value={editingPet.age || ""}
+                        onChange={(e) => setEditingPet({ ...editingPet, age: Number(e.target.value) })}
+                        className="w-full px-3 py-2 border border-slate-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-sm font-medium text-slate-700 mb-1">Peso (kg)</label>
+                      <input
+                        type="number"
+                        step="0.1"
+                        value={editingPet.weight || ""}
+                        onChange={(e) => setEditingPet({ ...editingPet, weight: Number(e.target.value) })}
+                        className="w-full px-3 py-2 border border-slate-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                      />
+                    </div>
+                  </div>
+                  
+                  <div className="flex gap-6 mt-2">
+                    <label className="flex items-center gap-2">
+                      <input
+                        type="checkbox"
+                        checked={editingPet.isVaccinated || false}
+                        onChange={(e) => setEditingPet({ ...editingPet, isVaccinated: e.target.checked })}
+                        className="rounded border-slate-300 text-blue-600 focus:ring-blue-500"
+                      />
+                      <span className="text-sm font-medium text-slate-700">Vacinado</span>
+                    </label>
+                    <label className="flex items-center gap-2">
+                      <input
+                        type="checkbox"
+                        checked={editingPet.isNeutered || false}
+                        onChange={(e) => setEditingPet({ ...editingPet, isNeutered: e.target.checked })}
+                        className="rounded border-slate-300 text-blue-600 focus:ring-blue-500"
+                      />
+                      <span className="text-sm font-medium text-slate-700">Castrado</span>
+                    </label>
+                  </div>
+                </div>
+
+                <div className="mt-6 flex gap-3">
+                  <button
+                    type="submit"
+                    className="inline-flex items-center gap-2 px-4 py-2 bg-green-600 text-white rounded-md hover:bg-green-700"
+                  >
+                    Salvar Alterações
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => setEditingPet(null)}
+                    className="px-4 py-2 bg-slate-200 text-slate-700 rounded-md hover:bg-slate-300"
+                  >
+                    Cancelar
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

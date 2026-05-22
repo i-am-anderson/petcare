@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router";
 import { useLocalStorage } from "../hooks/useLocalStorage";
 import { Client } from "../types";
-import { Plus, Search, Mail, Phone, MapPin, Trash2, MessageCircle, FileText } from "lucide-react";
+import { Plus, Search, Mail, Phone, MapPin, Trash2, MessageCircle, FileText, Pencil, X } from "lucide-react";
 import { usePagination } from "../hooks/usePagination";
 import { Pagination } from "../components/ui/pagination";
 
@@ -11,6 +11,7 @@ const PAGE_SIZE = 10;
 export function ClientList() {
   const [clients, setClients] = useLocalStorage<Client[]>("clients", []);
   const [searchTerm, setSearchTerm] = useState("");
+  const [editingClient, setEditingClient] = useState<Client | null>(null);
 
   const filteredClients = clients.filter(
     (client) =>
@@ -27,6 +28,14 @@ export function ClientList() {
     if (confirm("Tem certeza que deseja excluir este cliente?")) {
       setClients(clients.filter((c) => c.id !== id));
     }
+  };
+
+  const handleEditSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!editingClient) return;
+
+    setClients(clients.map(c => c.id === editingClient.id ? editingClient : c));
+    setEditingClient(null);
   };
 
   const formatAge = (birthdate?: string) => {
@@ -152,13 +161,22 @@ export function ClientList() {
                       )}
                     </td>
                     <td className="px-6 py-4">
-                      <button
-                        onClick={() => handleDelete(client.id)}
-                        className="text-red-600 hover:text-red-800"
-                        title="Excluir cliente"
-                      >
-                        <Trash2 className="h-4 w-4" />
-                      </button>
+                      <div className="flex items-center gap-3">
+                        <button
+                          onClick={() => setEditingClient(client)}
+                          className="text-blue-600 hover:text-blue-800"
+                          title="Editar cliente"
+                        >
+                          <Pencil className="h-4 w-4" />
+                        </button>
+                        <button
+                          onClick={() => handleDelete(client.id)}
+                          className="text-red-600 hover:text-red-800"
+                          title="Excluir cliente"
+                        >
+                          <Trash2 className="h-4 w-4" />
+                        </button>
+                      </div>
                     </td>
                   </tr>
                 ))
@@ -168,6 +186,120 @@ export function ClientList() {
         </div>
         <Pagination {...pagination} onPageChange={pagination.goToPage} />
       </div>
+
+      {editingClient && (
+        <div className="fixed inset-0 bg-[#00000090] bg-opacity-50 flex items-center justify-center p-4 z-50">
+          <div className="bg-white rounded-lg shadow-xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+            <div className="p-6">
+              <div className="flex items-center justify-between mb-4">
+                <h2 className="text-2xl font-bold text-slate-900">
+                  Editar Cliente
+                </h2>
+                <button onClick={() => setEditingClient(null)} className="text-slate-400 hover:text-slate-600">
+                  <X className="h-6 w-6" />
+                </button>
+              </div>
+
+              <form onSubmit={handleEditSubmit}>
+                <div className="space-y-4">
+                  <div className="grid grid-cols-2 gap-4">
+                    <div>
+                      <label className="block text-sm font-medium text-slate-700 mb-1">Nome *</label>
+                      <input
+                        type="text"
+                        required
+                        value={editingClient.name}
+                        onChange={(e) => setEditingClient({ ...editingClient, name: e.target.value })}
+                        className="w-full px-3 py-2 border border-slate-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-sm font-medium text-slate-700 mb-1">E-mail *</label>
+                      <input
+                        type="email"
+                        required
+                        value={editingClient.email}
+                        onChange={(e) => setEditingClient({ ...editingClient, email: e.target.value })}
+                        className="w-full px-3 py-2 border border-slate-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                      />
+                    </div>
+                  </div>
+
+                  <div className="grid grid-cols-2 gap-4">
+                    <div>
+                      <label className="block text-sm font-medium text-slate-700 mb-1">Telefone *</label>
+                      <input
+                        type="tel"
+                        required
+                        value={editingClient.phone}
+                        onChange={(e) => setEditingClient({ ...editingClient, phone: e.target.value })}
+                        className="w-full px-3 py-2 border border-slate-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-sm font-medium text-slate-700 mb-1">WhatsApp</label>
+                      <input
+                        type="tel"
+                        value={editingClient.whatsapp || ""}
+                        onChange={(e) => setEditingClient({ ...editingClient, whatsapp: e.target.value })}
+                        className="w-full px-3 py-2 border border-slate-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                      />
+                    </div>
+                  </div>
+
+                  <div>
+                    <label className="block text-sm font-medium text-slate-700 mb-1">Endereço</label>
+                    <input
+                      type="text"
+                      value={editingClient.address || ""}
+                      onChange={(e) => setEditingClient({ ...editingClient, address: e.target.value })}
+                      className="w-full px-3 py-2 border border-slate-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    />
+                  </div>
+
+                  <div className="grid grid-cols-3 gap-4">
+                    <div className="col-span-2">
+                      <label className="block text-sm font-medium text-slate-700 mb-1">Cidade</label>
+                      <input
+                        type="text"
+                        value={editingClient.city || ""}
+                        onChange={(e) => setEditingClient({ ...editingClient, city: e.target.value })}
+                        className="w-full px-3 py-2 border border-slate-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-sm font-medium text-slate-700 mb-1">UF</label>
+                      <input
+                        type="text"
+                        maxLength={2}
+                        value={editingClient.state || ""}
+                        onChange={(e) => setEditingClient({ ...editingClient, state: e.target.value })}
+                        className="w-full px-3 py-2 border border-slate-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <div className="mt-6 flex gap-3">
+                  <button
+                    type="submit"
+                    className="inline-flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700"
+                  >
+                    Salvar Alterações
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => setEditingClient(null)}
+                    className="px-4 py-2 bg-slate-200 text-slate-700 rounded-md hover:bg-slate-300"
+                  >
+                    Cancelar
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router";
 import { useLocalStorage } from "../hooks/useLocalStorage";
 import { Employee } from "../types";
-import { Plus, Search, Mail, Phone, Briefcase, Trash2, User, Calendar } from "lucide-react";
+import { Plus, Search, Mail, Phone, Briefcase, Trash2, User, Calendar, Pencil, X } from "lucide-react";
 import { usePagination } from "../hooks/usePagination";
 import { Pagination } from "../components/ui/pagination";
 
@@ -20,6 +20,7 @@ const ROLE_COLORS: Record<string, string> = {
 export function EmployeeList() {
   const [employees, setEmployees] = useLocalStorage<Employee[]>("employees", []);
   const [searchTerm, setSearchTerm] = useState("");
+  const [editingEmployee, setEditingEmployee] = useState<Employee | null>(null);
 
   const filteredEmployees = employees.filter(
     (employee) =>
@@ -35,6 +36,14 @@ export function EmployeeList() {
     if (confirm("Tem certeza que deseja excluir este funcionário?")) {
       setEmployees(employees.filter((e) => e.id !== id));
     }
+  };
+
+  const handleEditSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!editingEmployee) return;
+
+    setEmployees(employees.map(emp => emp.id === editingEmployee.id ? editingEmployee : emp));
+    setEditingEmployee(null);
   };
 
   const formatHireDate = (date?: string) => {
@@ -181,13 +190,22 @@ export function EmployeeList() {
                       )}
                     </td>
                     <td className="px-6 py-4">
-                      <button
-                        onClick={() => handleDelete(employee.id)}
-                        className="text-red-600 hover:text-red-800"
-                        title="Excluir funcionário"
-                      >
-                        <Trash2 className="h-4 w-4" />
-                      </button>
+                      <div className="flex items-center gap-3">
+                        <button
+                          onClick={() => setEditingEmployee(employee)}
+                          className="text-blue-600 hover:text-blue-800"
+                          title="Editar funcionário"
+                        >
+                          <Pencil className="h-4 w-4" />
+                        </button>
+                        <button
+                          onClick={() => handleDelete(employee.id)}
+                          className="text-red-600 hover:text-red-800"
+                          title="Excluir funcionário"
+                        >
+                          <Trash2 className="h-4 w-4" />
+                        </button>
+                      </div>
                     </td>
                   </tr>
                 ))
@@ -197,6 +215,114 @@ export function EmployeeList() {
         </div>
         <Pagination {...pagination} onPageChange={pagination.goToPage} />
       </div>
+
+      {editingEmployee && (
+        <div className="fixed inset-0 bg-[#00000090] bg-opacity-50 flex items-center justify-center p-4 z-50">
+          <div className="bg-white rounded-lg shadow-xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+            <div className="p-6">
+              <div className="flex items-center justify-between mb-4">
+                <h2 className="text-2xl font-bold text-slate-900">
+                  Editar Funcionário
+                </h2>
+                <button onClick={() => setEditingEmployee(null)} className="text-slate-400 hover:text-slate-600">
+                  <X className="h-6 w-6" />
+                </button>
+              </div>
+
+              <form onSubmit={handleEditSubmit}>
+                <div className="space-y-4">
+                  <div className="grid grid-cols-2 gap-4">
+                    <div>
+                      <label className="block text-sm font-medium text-slate-700 mb-1">Nome *</label>
+                      <input
+                        type="text"
+                        required
+                        value={editingEmployee.name}
+                        onChange={(e) => setEditingEmployee({ ...editingEmployee, name: e.target.value })}
+                        className="w-full px-3 py-2 border border-slate-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-sm font-medium text-slate-700 mb-1">E-mail *</label>
+                      <input
+                        type="email"
+                        required
+                        value={editingEmployee.email}
+                        onChange={(e) => setEditingEmployee({ ...editingEmployee, email: e.target.value })}
+                        className="w-full px-3 py-2 border border-slate-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                      />
+                    </div>
+                  </div>
+
+                  <div className="grid grid-cols-2 gap-4">
+                    <div>
+                      <label className="block text-sm font-medium text-slate-700 mb-1">Telefone *</label>
+                      <input
+                        type="tel"
+                        required
+                        value={editingEmployee.phone}
+                        onChange={(e) => setEditingEmployee({ ...editingEmployee, phone: e.target.value })}
+                        className="w-full px-3 py-2 border border-slate-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-sm font-medium text-slate-700 mb-1">Função *</label>
+                      <select
+                        required
+                        value={editingEmployee.role}
+                        onChange={(e) => setEditingEmployee({ ...editingEmployee, role: e.target.value })}
+                        className="w-full px-3 py-2 border border-slate-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                      >
+                        <option value="">Selecione...</option>
+                        {Object.keys(ROLE_COLORS).map(role => (
+                          <option key={role} value={role}>{role}</option>
+                        ))}
+                      </select>
+                    </div>
+                  </div>
+
+                  <div className="grid grid-cols-2 gap-4">
+                     <div>
+                      <label className="block text-sm font-medium text-slate-700 mb-1">CPF</label>
+                      <input
+                        type="text"
+                        value={editingEmployee.cpf || ""}
+                        onChange={(e) => setEditingEmployee({ ...editingEmployee, cpf: e.target.value })}
+                        className="w-full px-3 py-2 border border-slate-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-sm font-medium text-slate-700 mb-1">CRMV</label>
+                      <input
+                        type="text"
+                        value={editingEmployee.crmv || ""}
+                        onChange={(e) => setEditingEmployee({ ...editingEmployee, crmv: e.target.value })}
+                        className="w-full px-3 py-2 border border-slate-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <div className="mt-6 flex gap-3">
+                  <button
+                    type="submit"
+                    className="inline-flex items-center gap-2 px-4 py-2 bg-purple-600 text-white rounded-md hover:bg-purple-700"
+                  >
+                    Salvar Alterações
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => setEditingEmployee(null)}
+                    className="px-4 py-2 bg-slate-200 text-slate-700 rounded-md hover:bg-slate-300"
+                  >
+                    Cancelar
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
