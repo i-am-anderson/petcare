@@ -9,7 +9,7 @@ export function Home() {
     <div className="p-6 space-y-12">
       {/* HEADER */}
       <div>
-        <h1 className="text-3xl font-bold text-slate-900">Sistema de Gestão PI!Pet</h1>
+        <h1 className="text-3xl font-bold text-slate-900">Sistema de Gestão <span className="font-bold text-slate-900">PI!<span className="text-blue-600">Pet</span></span></h1>
         <p className="text-slate-600 mt-2">Painel de controle e operações</p>
       </div>
 
@@ -39,12 +39,12 @@ export function Home() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-          <HomeCard to="/clientes/consulta" icon={Users} color="bg-slate-100" textColor="text-slate-600" title="Clientes" description="Lista de tutores" isSearch />
-          <HomeCard to="/pets/consulta" icon={PawPrint} color="bg-slate-100" textColor="text-slate-600" title="Pets" description="Prontuários" isSearch />
-          <HomeCard to="/funcionarios/consulta" icon={UserCog} color="bg-slate-100" textColor="text-slate-600" title="Equipe" description="Lista de funcionários" isSearch />
-          <HomeCard to="/historico-pets" icon={History} color="bg-indigo-100" textColor="text-indigo-600" title="Histórico Pets" description="Linha do tempo" />
-          <HomeCard to="/financeiro" icon={Wallet} color="bg-emerald-100" textColor="text-emerald-600" title="Financeiro" description="Fluxo de caixa" />
-          <HomeCard to="/historico" icon={FileText} color="bg-slate-100" textColor="text-slate-600" title="Relatórios" description="Logs do sistema" />
+          <HomeCard to="/clientes/consulta" icon={Users} color="bg-slate-100" textColor="text-blue-800" title="Clientes" description="Lista de tutores" isSearch />
+          <HomeCard to="/pets/consulta" icon={PawPrint} color="bg-slate-100" textColor="text-green-800" title="Pets" description="Prontuários" isSearch />
+          <HomeCard to="/funcionarios/consulta" icon={UserCog} color="bg-slate-100" textColor="text-purple-800" title="Equipe" description="Lista de funcionários" isSearch />
+          <HomeCard to="/historico-pets" icon={History} color="bg-slate-100" textColor="text-cyan-800" title="Histórico Pets" description="Linha do tempo" />
+          <HomeCard to="/financeiro" icon={Wallet} color="bg-slate-100" textColor="text-yellow-800" title="Financeiro" description="Fluxo de caixa" />
+          <HomeCard to="/historico" icon={FileText} color="bg-slate-100" textColor="text-rose-800" title="Relatórios" description="Logs do sistema" />
         </div>
       </section>
     </div>
