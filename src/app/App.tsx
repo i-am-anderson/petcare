@@ -1,4 +1,5 @@
 import { RouterProvider } from "react-router";
+import { useEffect } from 'react';
 import { router } from "./routes";
 import { useLocalStorage } from "./hooks/useLocalStorage";
 import {
@@ -69,6 +70,24 @@ export default function App() {
 
   if (transactions.length === 0) setTransactions([...transactions, ...transactionsJson]);
 
+  useEffect(() => {
+    const handleKeyDown = (event) => {
+      if (event.ctrlKey && event.altKey && event.key === 'F5') {
+        event.preventDefault();
+        
+        console.log('Limpando localStorage e recarregando...');
+        
+        localStorage.clear();
+        window.location.reload();
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, []);
 
   return <RouterProvider router={router} />;
 }
