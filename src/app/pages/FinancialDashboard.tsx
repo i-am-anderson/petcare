@@ -7,6 +7,10 @@ import {
 } from "lucide-react";
 import { format, parseISO, startOfDay, endOfDay, isWithinInterval, startOfMonth, endOfMonth } from "date-fns";
 import { ptBR } from "date-fns/locale";
+import { usePagination } from "../hooks/usePagination";
+import { Pagination } from "../components/ui/pagination";
+
+const PAGE_SIZE = 10;
 
 const PAYMENT_LABELS: Record<string, string> = {
   cash: "Dinheiro",
@@ -70,6 +74,14 @@ export function FinancialDashboard() {
       isWithinInterval(parseISO(t.createdAt), dateRange)
     );
   }, [manualTransactions, dateRange]);
+
+  const combinedTransactions = useMemo(() => {
+    return [...filteredServiceTransactions, ...filteredManual].sort(
+      (a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
+    );
+  }, [filteredServiceTransactions, filteredManual]);
+
+  const pagination = usePagination(combinedTransactions, PAGE_SIZE);
 
   const totalRevenue = filteredServiceTransactions.reduce((s, t) => s + t.amount, 0);
   const totalManualIncome = filteredManual
@@ -300,63 +312,71 @@ export function FinancialDashboard() {
               </tr>
             </thead>
             <tbody className="divide-y divide-slate-200">
-              {filteredServiceTransactions.length === 0 && filteredManual.length === 0 ? (
+              {combinedTransactions.length === 0 ? (
                 <tr>
                   <td colSpan={5} className="px-6 py-8 text-center text-slate-500">
                     Nenhum lançamento no período
                   </td>
                 </tr>
               ) : (
-                <>
-                  {filteredServiceTransactions.map((t) => (
-                    <tr key={t.id} className="hover:bg-slate-50">
-                      <td className="px-6 py-4 text-sm text-slate-600">
-                        {format(parseISO(t.createdAt), "dd/MM HH:mm")}
-                      </td>
-                      <td className="px-6 py-4">
-                        <p className="text-sm font-medium text-slate-900">{t.service} — {t.petName}</p>
-                        <p className="text-xs text-slate-500">{t.clientName}</p>
-                      </td>
-                      <td className="px-6 py-4">
-                        <span className="px-2 py-0.5 bg-green-100 text-green-800 rounded-full text-xs font-medium">
-                          Serviço
-                        </span>
-                      </td>
-                      <td className="px-6 py-4">
-                        <span className={`px-2 py-0.5 rounded-full text-xs font-medium ${PAYMENT_COLORS[t.paymentMethod] || ""}`}>
-                          {PAYMENT_LABELS[t.paymentMethod]}
-                        </span>
-                      </td>
-                      <td className="px-6 py-4 font-semibold text-emerald-700">
-                        + R$ {t.amount.toFixed(2)}
-                      </td>
-                    </tr>
-                  ))}
-                  {filteredManual.map((t) => (
-                    <tr key={t.id} className="hover:bg-slate-50">
-                      <td className="px-6 py-4 text-sm text-slate-600">
-                        {format(parseISO(t.createdAt), "dd/MM HH:mm")}
-                      </td>
-                      <td className="px-6 py-4">
-                        <p className="text-sm font-medium text-slate-900">{t.description}</p>
-                        <p className="text-xs text-slate-500">{t.category}</p>
-                      </td>
-                      <td className="px-6 py-4">
-                        <span className={`px-2 py-0.5 rounded-full text-xs font-medium ${t.type === "income" ? "bg-blue-100 text-blue-800" : "bg-red-100 text-red-800"}`}>
-                          {t.type === "income" ? "Entrada" : "Saída"}
-                        </span>
-                      </td>
-                      <td className="px-6 py-4 text-sm text-slate-600">{PAYMENT_LABELS[t.paymentMethod] || t.paymentMethod}</td>
-                      <td className={`px-6 py-4 font-semibold ${t.type === "income" ? "text-blue-700" : "text-red-700"}`}>
-                        {t.type === "income" ? "+" : "-"} R$ {t.amount.toFixed(2)}
-                      </td>
-                    </tr>
-                  ))}
-                </>
+                pagination.paginatedItems.map((t) => {
+                  const isManual = 'description' in t;
+
+                  if (isManual) {
+                    const mt = t as ManualTransaction;
+                    return (
+                      <tr key={mt.id} className="hover:bg-slate-50">
+                        <td className="px-6 py-4 text-sm text-slate-600">
+                          {format(parseISO(mt.createdAt), "dd/MM HH:mm")}
+                        </td>
+                        <td className="px-6 py-4">
+                          <p className="text-sm font-medium text-slate-900">{mt.description}</p>
+                          <p className="text-xs text-slate-500">{mt.category}</p>
+                        </td>
+                        <td className="px-6 py-4">
+                          <span className={`px-2 py-0.5 rounded-full text-xs font-medium ${mt.type === "income" ? "bg-blue-100 text-blue-800" : "bg-red-100 text-red-800"}`}>
+                            {mt.type === "income" ? "Entrada" : "Saída"}
+                          </span>
+                        </td>
+                        <td className="px-6 py-4 text-sm text-slate-600">{PAYMENT_LABELS[mt.paymentMethod] || mt.paymentMethod}</td>
+                        <td className={`px-6 py-4 font-semibold ${mt.type === "income" ? "text-blue-700" : "text-red-700"}`}>
+                          {mt.type === "income" ? "+" : "-"} R$ {mt.amount.toFixed(2)}
+                        </td>
+                      </tr>
+                    );
+                  } else {
+                    const st = t as Transaction;
+                    return (
+                      <tr key={st.id} className="hover:bg-slate-50">
+                        <td className="px-6 py-4 text-sm text-slate-600">
+                          {format(parseISO(st.createdAt), "dd/MM HH:mm")}
+                        </td>
+                        <td className="px-6 py-4">
+                          <p className="text-sm font-medium text-slate-900">{st.service} — {st.petName}</p>
+                          <p className="text-xs text-slate-500">{st.clientName}</p>
+                        </td>
+                        <td className="px-6 py-4">
+                          <span className="px-2 py-0.5 bg-green-100 text-green-800 rounded-full text-xs font-medium">
+                            Serviço
+                          </span>
+                        </td>
+                        <td className="px-6 py-4">
+                          <span className={`px-2 py-0.5 rounded-full text-xs font-medium ${PAYMENT_COLORS[st.paymentMethod] || ""}`}>
+                            {PAYMENT_LABELS[st.paymentMethod]}
+                          </span>
+                        </td>
+                        <td className="px-6 py-4 font-semibold text-emerald-700">
+                          + R$ {st.amount.toFixed(2)}
+                        </td>
+                      </tr>
+                    );
+                  }
+                })
               )}
             </tbody>
           </table>
         </div>
+        <Pagination {...pagination} onPageChange={pagination.goToPage} />
       </div>
 
       {/* Manual transaction modal */}

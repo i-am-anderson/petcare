@@ -8,6 +8,10 @@ import {
 } from "lucide-react";
 import { format, parseISO, startOfMonth, endOfMonth, isWithinInterval, subMonths } from "date-fns";
 import { ptBR } from "date-fns/locale";
+import { usePagination } from "../hooks/usePagination";
+import { Pagination } from "../components/ui/pagination";
+
+const PAGE_SIZE = 10;
 
 export function ServiceHistory() {
   const [appointments, setAppointments] = useLocalStorage<Appointment[]>("appointments", []);
@@ -34,6 +38,8 @@ export function ServiceHistory() {
       })
       .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
   }, [appointments, searchTerm, statusFilter]);
+
+  const pagination = usePagination(filteredAppointments, PAGE_SIZE);
 
   const monthAppointments = useMemo(() => {
     return appointments.filter((apt) =>
@@ -299,7 +305,7 @@ export function ServiceHistory() {
                   </td>
                 </tr>
               ) : (
-                filteredAppointments.map((apt) => (
+                pagination.paginatedItems.map((apt) => (
                   <tr key={apt.id} className="hover:bg-slate-50">
                     <td className="px-6 py-4">
                       <div className="flex items-center gap-2">
@@ -358,6 +364,7 @@ export function ServiceHistory() {
             </tbody>
           </table>
         </div>
+        <Pagination {...pagination} onPageChange={pagination.goToPage} />
       </div>
     </div>
   );

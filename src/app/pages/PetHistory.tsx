@@ -9,6 +9,10 @@ import {
 } from "lucide-react";
 import { format, parseISO } from "date-fns";
 import { ptBR } from "date-fns/locale";
+import { usePagination } from "../hooks/usePagination";
+import { Pagination } from "../components/ui/pagination";
+
+const PAGE_SIZE = 10;
 
 export interface PetNote {
   id: string;
@@ -51,6 +55,8 @@ export function PetHistory() {
         p.clientName.toLowerCase().includes(searchTerm.toLowerCase())
     );
   }, [pets, searchTerm]);
+
+  const pagination = usePagination(filteredPets, PAGE_SIZE);
 
   const getPetAppointments = (petId: string) =>
     appointments
@@ -158,7 +164,7 @@ export function PetHistory() {
       )}
 
       <div className="space-y-4">
-        {filteredPets.map((pet) => {
+        {pagination.paginatedItems.map((pet) => {
           const petApts = getPetAppointments(pet.id);
           const petCIs = getPetCheckIns(pet.id);
           const petTxns = getPetTransactions(pet.id);
@@ -326,6 +332,12 @@ export function PetHistory() {
           );
         })}
       </div>
+      
+      {filteredPets.length > 0 && (
+        <div className="mt-4">
+          <Pagination {...pagination} onPageChange={pagination.goToPage} />
+        </div>
+      )}
 
       {/* Note modal */}
       {showNoteModal && (
