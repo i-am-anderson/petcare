@@ -1,224 +1,226 @@
-[
+import getDate from "../utils/getData";
+
+export const petNotesJson = [
   {
     "petId": "1a3b5c7d-9e0f-4123-b456-c7d8e9f0a1b2",
     "type": "allergy",
     "description": "Alergia a shampoos com sulfato – usar apenas produtos hipoalergênicos",
-    "date": "2026-05-02"
+    "date": getDate("2026-05-02")
   },
   {
     "petId": "1a3b5c7d-9e0f-4123-b456-c7d8e9f0a1b2",
     "type": "behavior",
     "description": "Dócil com pessoas, mas pode ser reativo com cães machos desconhecidos",
-    "date": "2026-05-02"
+    "date": getDate("2026-05-02")
   },
   {
     "petId": "2b4c6d8e-0f1a-4234-c567-d8e9f0a1b2c3",
     "type": "health",
     "description": "Histórico de infecção urinária recorrente – estimular ingestão de água durante a visita",
-    "date": "2026-05-05"
+    "date": getDate("2026-05-05")
   },
   {
     "petId": "2b4c6d8e-0f1a-4234-c567-d8e9f0a1b2c3",
     "type": "preference",
     "description": "Prefere secagem com temperatura baixa; evitar jato de ar direto no rosto",
-    "date": "2026-05-05"
+    "date": getDate("2026-05-05")
   },
   {
     "petId": "2b4c6d8e-0f1a-4234-c567-d8e9f0a1b2c3",
     "type": "behavior",
     "description": "Tímida no início do atendimento – não forçar contato, deixar explorar o espaço primeiro",
-    "date": "2026-05-08"
+    "date": getDate("2026-05-08")
   },
   {
     "petId": "3c5d7e9f-1a2b-4345-d678-e9f0a1b2c3d4",
     "type": "behavior",
     "description": "Muito agitada durante a tosa – usar petisco de distração para manter foco",
-    "date": "2026-05-06"
+    "date": getDate("2026-05-06")
   },
   {
     "petId": "3c5d7e9f-1a2b-4345-d678-e9f0a1b2c3d4",
     "type": "health",
     "description": "Displasia leve no quadril – evitar posições forçadas por tempo prolongado",
-    "date": "2026-05-06"
+    "date": getDate("2026-05-06")
   },
   {
     "petId": "6f8a0b2c-4d5e-4678-0123-b2c3d4e5f6a7",
     "type": "allergy",
     "description": "Sensível a fragrâncias artificiais – usar apenas shampoo neutro sem perfume",
-    "date": "2026-05-07"
+    "date": getDate("2026-05-07")
   },
   {
     "petId": "6f8a0b2c-4d5e-4678-0123-b2c3d4e5f6a7",
     "type": "preference",
     "description": "Tutor pede escovação prévia antes do banho; fica muito mais calmo",
-    "date": "2026-05-07"
+    "date": getDate("2026-05-07")
   },
   {
     "petId": "8b0c2d4e-6f7a-4890-2345-d4e5f6a7b8c9",
     "type": "behavior",
     "description": "Muito tímida na chegada – bufar é reação normal, não forçar aproximação no início",
-    "date": "2026-05-08"
+    "date": getDate("2026-05-08")
   },
   {
     "petId": "8b0c2d4e-6f7a-4890-2345-d4e5f6a7b8c9",
     "type": "preference",
     "description": "Tutora solicita unhas bem curtas a cada visita",
-    "date": "2026-05-08"
+    "date": getDate("2026-05-08")
   },
   {
     "petId": "9c1d3e5f-7a8b-4901-3456-e5f6a7b8c9d0",
     "type": "behavior",
     "description": "Muito agitado durante o banho – costuma morder a mangueira, usar mordedor de distração",
-    "date": "2026-05-02"
+    "date": getDate("2026-05-02")
   },
   {
     "petId": "9c1d3e5f-7a8b-4901-3456-e5f6a7b8c9d0",
     "type": "health",
     "description": "Tendência a otite; verificar e registrar estado dos ouvidos a cada visita",
-    "date": "2026-05-02"
+    "date": getDate("2026-05-02")
   },
   {
     "petId": "9c1d3e5f-7a8b-4901-3456-e5f6a7b8c9d0",
     "type": "allergy",
     "description": "Reação adversa a corticoide tópico – comunicar à Dra. Beatriz se notar vermelhidão",
-    "date": "2026-05-09"
+    "date": getDate("2026-05-09")
   },
   {
     "petId": "0d2e4f6a-8b9c-4012-4567-f6a7b8c9d0e1",
     "type": "preference",
     "description": "Tutor solicita que o focinho não seja aparado na tosa padrão Schnauzer",
-    "date": "2026-05-05"
+    "date": getDate("2026-05-05")
   },
   {
     "petId": "0d2e4f6a-8b9c-4012-4567-f6a7b8c9d0e1",
     "type": "general",
     "description": "Manter corte estilo Schnauzer clássico conforme histórico de visitas anteriores",
-    "date": "2026-05-05"
+    "date": getDate("2026-05-05")
   },
   {
     "petId": "2f4a6b8c-0d1e-4234-6789-b8c9d0e1f2a3",
     "type": "behavior",
     "description": "Gata muito sensível – arranhões e bufos são reação normal, manipular lentamente",
-    "date": "2026-05-06"
+    "date": getDate("2026-05-06")
   },
   {
     "petId": "2f4a6b8c-0d1e-4234-6789-b8c9d0e1f2a3",
     "type": "health",
     "description": "Sobrepeso leve (4.2 kg) – tutor em acompanhamento com vet para dieta controlada",
-    "date": "2026-05-06"
+    "date": getDate("2026-05-06")
   },
   {
     "petId": "3a5b7c9d-1e2f-4345-7890-c9d0e1f2a3b4",
     "type": "allergy",
     "description": "Dermatite alérgica diagnosticada – usar exclusivamente shampoo dermatológico prescrito",
-    "date": "2026-05-07"
+    "date": getDate("2026-05-07")
   },
   {
     "petId": "3a5b7c9d-1e2f-4345-7890-c9d0e1f2a3b4",
     "type": "health",
     "description": "Pele com tendência a ressecamento – aplicar hidratante leave-in após secagem",
-    "date": "2026-05-07"
+    "date": getDate("2026-05-07")
   },
   {
     "petId": "4b6c8d9e-2f3a-4456-8901-d0e1f2a3b4c5",
     "type": "behavior",
     "description": "Cão grande e forte; usar guia reforçada e sempre chamar segundo atendente no banho",
-    "date": "2026-05-08"
+    "date": getDate("2026-05-08")
   },
   {
     "petId": "4b6c8d9e-2f3a-4456-8901-d0e1f2a3b4c5",
     "type": "general",
     "description": "Tutor avisa com antecedência quando for trazer – reservar atendente mais experiente",
-    "date": "2026-05-08"
+    "date": getDate("2026-05-08")
   },
   {
     "petId": "5c7d9e0f-3a4b-4567-9012-e1f2a3b4c5d6",
     "type": "health",
     "description": "Luxação de patela grau 1 – não segurar ou apoiar peso pelas patas traseiras",
-    "date": "2026-05-09"
+    "date": getDate("2026-05-09")
   },
   {
     "petId": "5c7d9e0f-3a4b-4567-9012-e1f2a3b4c5d6",
     "type": "preference",
     "description": "Tutora solicita tosa higiênica a cada 3 semanas, sempre junto ao banho",
-    "date": "2026-05-09"
+    "date": getDate("2026-05-09")
   },
   {
     "petId": "7e9f1a2b-5c6d-4789-1234-a3b4c5d6e7f8",
     "type": "general",
     "description": "Filhote ainda em adaptação – usar muito elogio verbal e petisco a cada etapa",
-    "date": "2026-05-12"
+    "date": getDate("2026-05-12")
   },
   {
     "petId": "7e9f1a2b-5c6d-4789-1234-a3b4c5d6e7f8",
     "type": "behavior",
     "description": "Pode morder gentilmente por curiosidade e não por agressividade – sem causa de preocupação",
-    "date": "2026-05-12"
+    "date": getDate("2026-05-12")
   },
   {
     "petId": "8f0a2b3c-6d7e-4890-2345-b4c5d6e7f8a9",
     "type": "allergy",
     "description": "Alergia a shampoo com extrato de aveia – usar apenas produto indicado pelo tutor",
-    "date": "2026-05-02"
+    "date": getDate("2026-05-02")
   },
   {
     "petId": "8f0a2b3c-6d7e-4890-2345-b4c5d6e7f8a9",
     "type": "health",
     "description": "Otite crônica controlada – limpar ouvidos com solução indicada a cada visita",
-    "date": "2026-05-02"
+    "date": getDate("2026-05-02")
   },
   {
     "petId": "8f0a2b3c-6d7e-4890-2345-b4c5d6e7f8a9",
     "type": "preference",
     "description": "Tutor sempre pede laço vermelho no acabamento",
-    "date": "2026-05-09"
+    "date": getDate("2026-05-09")
   },
   {
     "petId": "9a1b3c4d-7e8f-4901-3456-c5d6e7f8a9b0",
     "type": "behavior",
     "description": "Detesta secador de ar quente – preferir toalha + ambiente aquecido sem barulho",
-    "date": "2026-05-13"
+    "date": getDate("2026-05-13")
   },
   {
     "petId": "9a1b3c4d-7e8f-4901-3456-c5d6e7f8a9b0",
     "type": "general",
     "description": "Tutora traz pano familiar dentro da caixinha para reduzir estresse de transporte",
-    "date": "2026-05-13"
+    "date": getDate("2026-05-13")
   },
   {
     "petId": "5a7b9c1d-3e4f-4567-9012-b0c1d2e3-f4a5",
     "type": "behavior",
     "description": "Late intensamente durante o atendimento, especialmente com barulho externo",
-    "date": "2026-05-14"
+    "date": getDate("2026-05-14")
   },
   {
     "petId": "5a7b9c1d-3e4f-4567-9012-b0c1d2e3-f4a5",
     "type": "health",
     "description": "Displasia de quadril diagnosticada – não manter posições estáticas forçadas por mais de 2 min",
-    "date": "2026-05-14"
+    "date": getDate("2026-05-14")
   },
   {
     "petId": "8d0e2f4a-6b7c-4890-2345-d4e5f6a7b8c9",
     "type": "preference",
     "description": "Tutor prefere acabamento com escovação de pelo longo; evitar corte acima do necessário",
-    "date": "2026-05-16"
+    "date": getDate("2026-05-16")
   },
   {
     "petId": "8d0e2f4a-6b7c-4890-2345-d4e5f6a7b8c9",
     "type": "health",
     "description": "Sobrepeso (5.1 kg para Persa adulto) – tutor em acompanhamento veterinário",
-    "date": "2026-05-16"
+    "date": getDate("2026-05-16")
   },
   {
     "petId": "0f2a4b6c-8d9e-4012-4567-a3b4c5d6e7f8",
     "type": "allergy",
     "description": "Pele muito sensível – obrigatório usar shampoo hipoalergênico sem corante nem perfume",
-    "date": "2026-05-12"
+    "date": getDate("2026-05-12")
   },
   {
     "petId": "0f2a4b6c-8d9e-4012-4567-a3b4c5d6e7f8",
     "type": "health",
     "description": "Propenso a dermatite nas dobras de pele – higienizar e secar bem as regiões de prega",
-    "date": "2026-05-12"
+    "date": getDate("2026-05-12")
   }
 ]

@@ -1,4 +1,6 @@
-[
+import getDate from "../utils/getData";
+
+export const petsJson = [
   {
     "id": "1a3b5c7d-9e0f-4123-b456-c7d8e9f0a1b2",
     "name": "Rex",
@@ -14,7 +16,7 @@
     "isVaccinated": true,
     "microchip": "985121023456789",
     "photo": "",
-    "createdAt": "2024-05-20T10:00:00Z"
+    "createdAt": getDate("2024-05-20T10:00:00Z")
   },
   {
     "id": "2b4c6d8e-0f1a-4234-c567-d8e9f0a1b2c3",
@@ -31,7 +33,7 @@
     "isVaccinated": true,
     "microchip": "985121023456790",
     "photo": "",
-    "createdAt": "2024-05-20T10:00:00Z"
+    "createdAt": getDate("2024-05-20T10:00:00Z")
   },
   {
     "id": "3c5d7e9f-1a2b-4345-d678-e9f0a1b2c3d4",
@@ -48,7 +50,7 @@
     "isVaccinated": true,
     "microchip": "",
     "photo": "",
-    "createdAt": "2024-05-20T10:00:00Z"
+    "createdAt": getDate("2024-05-20T10:00:00Z")
   },
   {
     "id": "4d6e8f0a-2b3c-4456-e789-f0a1b2c3d4e5",
@@ -65,7 +67,7 @@
     "isVaccinated": false,
     "microchip": "",
     "photo": "",
-    "createdAt": "2024-05-20T10:00:00Z"
+    "createdAt": getDate("2024-05-20T10:00:00Z")
   },
   {
     "id": "5e7f9a1b-3c4d-4567-f890-a1b2c3d4e5f6",
@@ -82,7 +84,7 @@
     "isVaccinated": false,
     "microchip": "",
     "photo": "",
-    "createdAt": "2024-05-20T10:00:00Z"
+    "createdAt": getDate("2024-05-20T10:00:00Z")
   },
   {
     "id": "6f8a0b2c-4d5e-4678-0123-b2c3d4e5f6a7",
@@ -99,7 +101,7 @@
     "isVaccinated": true,
     "microchip": "985121023456791",
     "photo": "",
-    "createdAt": "2024-05-20T10:00:00Z"
+    "createdAt": getDate("2024-05-20T10:00:00Z")
   },
   {
     "id": "7a9b1c3d-5e6f-4789-1234-c3d4e5f6a7b8",
@@ -116,7 +118,7 @@
     "isVaccinated": false,
     "microchip": "",
     "photo": "",
-    "createdAt": "2024-05-20T10:00:00Z"
+    "createdAt": getDate("2024-05-20T10:00:00Z")
   },
   {
     "id": "8b0c2d4e-6f7a-4890-2345-d4e5f6a7b8c9",
@@ -133,7 +135,7 @@
     "isVaccinated": true,
     "microchip": "",
     "photo": "",
-    "createdAt": "2024-05-20T10:00:00Z"
+    "createdAt": getDate("2024-05-20T10:00:00Z")
   },
   {
     "id": "9c1d3e5f-7a8b-4901-3456-e5f6a7b8c9d0",
@@ -150,7 +152,7 @@
     "isVaccinated": true,
     "microchip": "985121023456792",
     "photo": "",
-    "createdAt": "2024-05-20T10:00:00Z"
+    "createdAt": getDate("2024-05-20T10:00:00Z")
   },
   {
     "id": "0d2e4f6a-8b9c-4012-4567-f6a7b8c9d0e1",
@@ -167,7 +169,7 @@
     "isVaccinated": true,
     "microchip": "",
     "photo": "",
-    "createdAt": "2024-05-20T10:00:00Z"
+    "createdAt": getDate("2024-05-20T10:00:00Z")
   },
   {
     "id": "1e3f5a7b-9c0d-4123-5678-a7b8c9d0e1f2",
@@ -184,7 +186,7 @@
     "isVaccinated": false,
     "microchip": "985121023456793",
     "photo": "",
-    "createdAt": "2024-05-20T10:00:00Z"
+    "createdAt": getDate("2024-05-20T10:00:00Z")
   },
   {
     "id": "2f4a6b8c-0d1e-4234-6789-b8c9d0e1f2a3",
@@ -201,7 +203,7 @@
     "isVaccinated": true,
     "microchip": "",
     "photo": "",
-    "createdAt": "2024-05-20T10:00:00Z"
+    "createdAt": getDate("2024-05-20T10:00:00Z")
   },
   {
     "id": "3a5b7c9d-1e2f-4345-7890-c9d0e1f2a3b4",
@@ -218,7 +220,7 @@
     "isVaccinated": true,
     "microchip": "985121023456794",
     "photo": "",
-    "createdAt": "2024-05-20T10:00:00Z"
+    "createdAt": getDate("2024-05-20T10:00:00Z")
   },
   {
     "id": "4b6c8d9e-2f3a-4456-8901-d0e1f2a3b4c5",
@@ -235,7 +237,7 @@
     "isVaccinated": true,
     "microchip": "985121023456795",
     "photo": "",
-    "createdAt": "2024-05-20T10:00:00Z"
+    "createdAt": getDate("2024-05-20T10:00:00Z")
   },
   {
     "id": "5c7d9e0f-3a4b-4567-9012-e1f2a3b4c5d6",
@@ -252,7 +254,7 @@
     "isVaccinated": true,
     "microchip": "",
     "photo": "",
-    "createdAt": "2024-05-20T10:00:00Z"
+    "createdAt": getDate("2024-05-20T10:00:00Z")
   },
   {
     "id": "6d8e0f1a-4b5c-4678-0123-f2a3b4c5d6e7",
@@ -269,7 +271,7 @@
     "isVaccinated": false,
     "microchip": "",
     "photo": "",
-    "createdAt": "2024-05-20T10:00:00Z"
+    "createdAt": getDate("2024-05-20T10:00:00Z")
   },
   {
     "id": "7e9f1a2b-5c6d-4789-1234-a3b4c5d6e7f8",
@@ -286,7 +288,7 @@
     "isVaccinated": true,
     "microchip": "",
     "photo": "",
-    "createdAt": "2024-05-20T10:00:00Z"
+    "createdAt": getDate("2024-05-20T10:00:00Z")
   },
   {
     "id": "8f0a2b3c-6d7e-4890-2345-b4c5d6e7f8a9",
@@ -303,7 +305,7 @@
     "isVaccinated": true,
     "microchip": "985121023456796",
     "photo": "",
-    "createdAt": "2024-05-20T10:00:00Z"
+    "createdAt": getDate("2024-05-20T10:00:00Z")
   },
   {
     "id": "9a1b3c4d-7e8f-4901-3456-c5d6e7f8a9b0",
@@ -320,7 +322,7 @@
     "isVaccinated": true,
     "microchip": "",
     "photo": "",
-    "createdAt": "2024-05-20T10:00:00Z"
+    "createdAt": getDate("2024-05-20T10:00:00Z")
   },
   {
     "id": "0b2c4d5e-8f9a-4012-4567-d6e7f8a9b0c1",
@@ -337,7 +339,7 @@
     "isVaccinated": true,
     "microchip": "985121023456797",
     "photo": "",
-    "createdAt": "2024-05-20T10:00:00Z"
+    "createdAt": getDate("2024-05-20T10:00:00Z")
   },
   {
     "id": "1c3d5e6f-9a0b-4123-5678-e7f8a9b0c1d2",
@@ -354,7 +356,7 @@
     "isVaccinated": true,
     "microchip": "",
     "photo": "",
-    "createdAt": "2024-05-20T10:00:00Z"
+    "createdAt": getDate("2024-05-20T10:00:00Z")
   },
   {
     "id": "2d4e6f7a-0b1c-4234-6789-e7f8a9b0c1d2",
@@ -371,7 +373,7 @@
     "isVaccinated": false,
     "microchip": "",
     "photo": "",
-    "createdAt": "2024-05-20T10:00:00Z"
+    "createdAt": getDate("2024-05-20T10:00:00Z")
   },
   {
     "id": "3e5f7a8b-1c2d-4345-7890-f8a9b0c1d2e3",
@@ -388,7 +390,7 @@
     "isVaccinated": true,
     "microchip": "985121023456798",
     "photo": "",
-    "createdAt": "2024-05-20T10:00:00Z"
+    "createdAt": getDate("2024-05-20T10:00:00Z")
   },
   {
     "id": "4f6a8b0c-2d3e-4456-8901-a9b0c1d2-e3f4",
@@ -405,7 +407,7 @@
     "isVaccinated": true,
     "microchip": "985121023456799",
     "photo": "",
-    "createdAt": "2024-05-20T10:00:00Z"
+    "createdAt": getDate("2024-05-20T10:00:00Z")
   },
   {
     "id": "5a7b9c1d-3e4f-4567-9012-b0c1d2e3-f4a5",
@@ -422,7 +424,7 @@
     "isVaccinated": true,
     "microchip": "985121023456800",
     "photo": "",
-    "createdAt": "2024-05-20T10:00:00Z"
+    "createdAt": getDate("2024-05-20T10:00:00Z")
   },
   {
     "id": "6b8c0d2e-4f5a-4678-0123-a1b2c3d4e5f6",
@@ -439,7 +441,7 @@
     "isVaccinated": false,
     "microchip": "985121023456801",
     "photo": "",
-    "createdAt": "2024-05-20T10:00:00Z"
+    "createdAt": getDate("2024-05-20T10:00:00Z")
   },
   {
     "id": "7c9d1e3f-5a6b-4789-1234-b2c3d4e5f6a7",
@@ -456,7 +458,7 @@
     "isVaccinated": true,
     "microchip": "",
     "photo": "",
-    "createdAt": "2024-05-20T10:00:00Z"
+    "createdAt": getDate("2024-05-20T10:00:00Z")
   },
   {
     "id": "8d0e2f4a-6b7c-4890-2345-d4e5f6a7b8c9",
@@ -473,7 +475,7 @@
     "isVaccinated": true,
     "microchip": "",
     "photo": "",
-    "createdAt": "2024-05-20T10:00:00Z"
+    "createdAt": getDate("2024-05-20T10:00:00Z")
   },
   {
     "id": "9e1f3a5b-7c8d-4901-3456-e1f2a3b4c5d6",
@@ -490,7 +492,7 @@
     "isVaccinated": false,
     "microchip": "",
     "photo": "",
-    "createdAt": "2024-05-20T10:00:00Z"
+    "createdAt": getDate("2024-05-20T10:00:00Z")
   },
   {
     "id": "0f2a4b6c-8d9e-4012-4567-a3b4c5d6e7f8",
@@ -507,6 +509,6 @@
     "isVaccinated": true,
     "microchip": "985121023456802",
     "photo": "",
-    "createdAt": "2024-05-20T10:00:00Z"
+    "createdAt": getDate("2024-05-20T10:00:00Z")
   }
 ]

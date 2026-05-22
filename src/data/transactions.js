@@ -1,4 +1,6 @@
-[
+import getDate from "../utils/getData";
+
+export const transactionsJson = [
   {
     "id": "a6f002d8-45d3-4121-a8b8-fe373b4b4dab",
     "checkInId": "7ad166e7-a6c2-4a17-ad57-e5a1de7684ea",
@@ -10,7 +12,7 @@
     "paymentMethod": "pix",
     "status": "paid",
     "checkOutTime": "11:05",
-    "createdAt": "2026-05-02T11:05:00.000Z"
+    "createdAt": getDate("2026-05-02T11:05:00.000Z")
   },
   {
     "id": "bd74a1b6-984d-41c3-b6b9-90736ef93451",
@@ -23,7 +25,7 @@
     "paymentMethod": "cash",
     "status": "paid",
     "checkOutTime": "11:40",
-    "createdAt": "2026-05-02T11:40:00.000Z"
+    "createdAt": getDate("2026-05-02T11:40:00.000Z")
   },
   {
     "id": "d00552ca-7fee-4a26-a65d-06b3668a04d3",
@@ -36,7 +38,7 @@
     "paymentMethod": "credit_card",
     "status": "paid",
     "checkOutTime": "15:55",
-    "createdAt": "2026-05-02T15:55:00.000Z"
+    "createdAt": getDate("2026-05-02T15:55:00.000Z")
   },
   {
     "id": "627fac75-8a89-4c07-bc1c-2c8db37a213b",
@@ -49,7 +51,7 @@
     "paymentMethod": "pix",
     "status": "paid",
     "checkOutTime": "10:15",
-    "createdAt": "2026-05-05T10:15:00.000Z"
+    "createdAt": getDate("2026-05-05T10:15:00.000Z")
   },
   {
     "id": "3fa809d2-1454-4658-9ab9-1047de105de9",
@@ -62,7 +64,7 @@
     "paymentMethod": "debit_card",
     "status": "paid",
     "checkOutTime": "11:15",
-    "createdAt": "2026-05-05T11:15:00.000Z"
+    "createdAt": getDate("2026-05-05T11:15:00.000Z")
   },
   {
     "id": "25e2360c-a9b5-4aca-9c51-8c87d66c82d9",
@@ -75,7 +77,7 @@
     "paymentMethod": "pix",
     "status": "paid",
     "checkOutTime": "16:45",
-    "createdAt": "2026-05-05T16:45:00.000Z"
+    "createdAt": getDate("2026-05-05T16:45:00.000Z")
   },
   {
     "id": "ed97f797-e01d-4767-9369-b5b3044d5ff7",
@@ -88,7 +90,7 @@
     "paymentMethod": "credit_card",
     "status": "paid",
     "checkOutTime": "11:35",
-    "createdAt": "2026-05-06T11:35:00.000Z"
+    "createdAt": getDate("2026-05-06T11:35:00.000Z")
   },
   {
     "id": "9d7226e6-d139-425a-8d8d-b881a9070751",
@@ -101,7 +103,7 @@
     "paymentMethod": "pix",
     "status": "paid",
     "checkOutTime": "11:55",
-    "createdAt": "2026-05-06T11:55:00.000Z"
+    "createdAt": getDate("2026-05-06T11:55:00.000Z")
   },
   {
     "id": "5a873e62-2b78-4ece-b025-1f7cf3a6cbae",
@@ -114,7 +116,7 @@
     "paymentMethod": "cash",
     "status": "paid",
     "checkOutTime": "16:30",
-    "createdAt": "2026-05-06T16:30:00.000Z"
+    "createdAt": getDate("2026-05-06T16:30:00.000Z")
   },
   {
     "id": "737cb19e-87c7-4970-a6f4-61c55675b5ee",
@@ -127,7 +129,7 @@
     "paymentMethod": "pix",
     "status": "paid",
     "checkOutTime": "10:30",
-    "createdAt": "2026-05-07T10:30:00.000Z"
+    "createdAt": getDate("2026-05-07T10:30:00.000Z")
   },
   {
     "id": "6813756d-fd28-4db9-9c92-94ad4ef8766e",
@@ -140,7 +142,7 @@
     "paymentMethod": "credit_card",
     "status": "paid",
     "checkOutTime": "12:10",
-    "createdAt": "2026-05-07T12:10:00.000Z"
+    "createdAt": getDate("2026-05-07T12:10:00.000Z")
   },
   {
     "id": "4920a9ec-4086-470a-a288-8ea5ad9aeaee",
@@ -153,7 +155,7 @@
     "paymentMethod": "cash",
     "status": "paid",
     "checkOutTime": "17:50",
-    "createdAt": "2026-05-07T17:50:00.000Z"
+    "createdAt": getDate("2026-05-07T17:50:00.000Z")
   },
   {
     "id": "97dc06c4-ee3f-46a0-a701-af423c6df453",
@@ -166,7 +168,7 @@
     "paymentMethod": "pix",
     "status": "paid",
     "checkOutTime": "09:35",
-    "createdAt": "2026-05-08T09:35:00.000Z"
+    "createdAt": getDate("2026-05-08T09:35:00.000Z")
   },
   {
     "id": "7d5e4262-79b2-451b-9776-04b494b043db",
@@ -179,7 +181,7 @@
     "paymentMethod": "debit_card",
     "status": "paid",
     "checkOutTime": "11:15",
-    "createdAt": "2026-05-08T11:15:00.000Z"
+    "createdAt": getDate("2026-05-08T11:15:00.000Z")
   },
   {
     "id": "4468c627-1d83-4f1e-807c-7260dfb71d69",
@@ -192,7 +194,7 @@
     "paymentMethod": "pix",
     "status": "paid",
     "checkOutTime": "14:05",
-    "createdAt": "2026-05-08T14:05:00.000Z"
+    "createdAt": getDate("2026-05-08T14:05:00.000Z")
   },
   {
     "id": "c52f5302-6b93-4dbc-b2bb-7760b66900a9",
@@ -205,7 +207,7 @@
     "paymentMethod": "cash",
     "status": "paid",
     "checkOutTime": "10:30",
-    "createdAt": "2026-05-09T10:30:00.000Z"
+    "createdAt": getDate("2026-05-09T10:30:00.000Z")
   },
   {
     "id": "cc806e4f-1c6c-40a6-889e-3e8ca510feeb",
@@ -218,7 +220,7 @@
     "paymentMethod": "credit_card",
     "status": "paid",
     "checkOutTime": "13:25",
-    "createdAt": "2026-05-09T13:25:00.000Z"
+    "createdAt": getDate("2026-05-09T13:25:00.000Z")
   },
   {
     "id": "34c5761c-e268-411a-8f38-14683166514b",
@@ -231,7 +233,7 @@
     "paymentMethod": "pix",
     "status": "paid",
     "checkOutTime": "15:50",
-    "createdAt": "2026-05-09T15:50:00.000Z"
+    "createdAt": getDate("2026-05-09T15:50:00.000Z")
   },
   {
     "id": "527a4f6d-c444-49b9-92ea-80867153e145",
@@ -244,7 +246,7 @@
     "paymentMethod": "cash",
     "status": "paid",
     "checkOutTime": "16:55",
-    "createdAt": "2026-05-09T16:55:00.000Z"
+    "createdAt": getDate("2026-05-09T16:55:00.000Z")
   },
   {
     "id": "dbcfc3bb-9c1f-4014-a093-4efef4fe846e",
@@ -257,7 +259,7 @@
     "paymentMethod": "pix",
     "status": "paid",
     "checkOutTime": "11:25",
-    "createdAt": "2026-05-12T11:25:00.000Z"
+    "createdAt": getDate("2026-05-12T11:25:00.000Z")
   },
   {
     "id": "b917d0f1-d549-4a74-9711-6528125a0c4d",
@@ -270,7 +272,7 @@
     "paymentMethod": "debit_card",
     "status": "paid",
     "checkOutTime": "12:15",
-    "createdAt": "2026-05-12T12:15:00.000Z"
+    "createdAt": getDate("2026-05-12T12:15:00.000Z")
   },
   {
     "id": "063a0d09-689f-4e99-ae8e-ce3219ed68bf",
@@ -283,7 +285,7 @@
     "paymentMethod": "credit_card",
     "status": "paid",
     "checkOutTime": "16:10",
-    "createdAt": "2026-05-12T16:10:00.000Z"
+    "createdAt": getDate("2026-05-12T16:10:00.000Z")
   },
   {
     "id": "e8bede5e-87e4-4ef8-8777-ca0a0cf8c36e",
@@ -296,7 +298,7 @@
     "paymentMethod": "pix",
     "status": "paid",
     "checkOutTime": "10:15",
-    "createdAt": "2026-05-13T10:15:00.000Z"
+    "createdAt": getDate("2026-05-13T10:15:00.000Z")
   },
   {
     "id": "db7ace40-4403-46df-aba6-ffe4b8a1aef9",
@@ -309,7 +311,7 @@
     "paymentMethod": "cash",
     "status": "paid",
     "checkOutTime": "11:55",
-    "createdAt": "2026-05-13T11:55:00.000Z"
+    "createdAt": getDate("2026-05-13T11:55:00.000Z")
   },
   {
     "id": "f1bceb75-620a-434f-8df6-b4afc5dff1eb",
@@ -322,7 +324,7 @@
     "paymentMethod": "pix",
     "status": "paid",
     "checkOutTime": "09:55",
-    "createdAt": "2026-05-14T09:55:00.000Z"
+    "createdAt": getDate("2026-05-14T09:55:00.000Z")
   },
   {
     "id": "399eddbd-d054-4f10-ac11-d5ac74ce408d",
@@ -335,7 +337,7 @@
     "paymentMethod": "credit_card",
     "status": "paid",
     "checkOutTime": "13:35",
-    "createdAt": "2026-05-14T13:35:00.000Z"
+    "createdAt": getDate("2026-05-14T13:35:00.000Z")
   },
   {
     "id": "e596945d-8300-447e-8d2b-a67c7e13e447",
@@ -348,7 +350,7 @@
     "paymentMethod": "pix",
     "status": "paid",
     "checkOutTime": "16:00",
-    "createdAt": "2026-05-14T16:00:00.000Z"
+    "createdAt": getDate("2026-05-14T16:00:00.000Z")
   },
   {
     "id": "40510998-d8ce-4572-8270-ed35c0035fbb",
@@ -361,7 +363,7 @@
     "paymentMethod": "debit_card",
     "status": "paid",
     "checkOutTime": "10:25",
-    "createdAt": "2026-05-15T10:25:00.000Z"
+    "createdAt": getDate("2026-05-15T10:25:00.000Z")
   },
   {
     "id": "127d8144-8922-46d5-8d3f-8194039fe4f6",
@@ -374,7 +376,7 @@
     "paymentMethod": "pix",
     "status": "paid",
     "checkOutTime": "11:40",
-    "createdAt": "2026-05-15T11:40:00.000Z"
+    "createdAt": getDate("2026-05-15T11:40:00.000Z")
   },
   {
     "id": "ef5cb0c4-ce49-4fb2-88ed-ef63c3037871",
@@ -387,7 +389,7 @@
     "paymentMethod": "cash",
     "status": "paid",
     "checkOutTime": "16:35",
-    "createdAt": "2026-05-15T16:35:00.000Z"
+    "createdAt": getDate("2026-05-15T16:35:00.000Z")
   },
   {
     "id": "d096e26d-0a8a-4f21-aa4b-fd763746c842",
@@ -400,7 +402,7 @@
     "paymentMethod": "pix",
     "status": "paid",
     "checkOutTime": "10:50",
-    "createdAt": "2026-05-16T10:50:00.000Z"
+    "createdAt": getDate("2026-05-16T10:50:00.000Z")
   },
   {
     "id": "32d556a2-cd89-4172-83f3-a623b5404fc9",
@@ -413,7 +415,7 @@
     "paymentMethod": "credit_card",
     "status": "paid",
     "checkOutTime": "12:05",
-    "createdAt": "2026-05-16T12:05:00.000Z"
+    "createdAt": getDate("2026-05-16T12:05:00.000Z")
   },
   {
     "id": "cfdf18ab-95bf-4bfc-b02a-8a4255dd1a63",
@@ -426,7 +428,7 @@
     "paymentMethod": "pix",
     "status": "paid",
     "checkOutTime": "14:50",
-    "createdAt": "2026-05-16T14:50:00.000Z"
+    "createdAt": getDate("2026-05-16T14:50:00.000Z")
   },
   {
     "id": "00a65a87-ea03-4f1f-b296-996fdd4719d2",
@@ -439,7 +441,7 @@
     "paymentMethod": "pix",
     "status": "paid",
     "checkOutTime": "10:30",
-    "createdAt": "2026-05-19T10:30:00.000Z"
+    "createdAt": getDate("2026-05-19T10:30:00.000Z")
   },
   {
     "id": "d2ee9da3-b7d4-4e3f-84b5-2ca1d93a4e0d",
@@ -452,7 +454,7 @@
     "paymentMethod": "cash",
     "status": "paid",
     "checkOutTime": "13:20",
-    "createdAt": "2026-05-19T13:20:00.000Z"
+    "createdAt": getDate("2026-05-19T13:20:00.000Z")
   },
   {
     "id": "f14b5385-f43b-4461-9dc1-28494f49ead5",
@@ -465,7 +467,7 @@
     "paymentMethod": "debit_card",
     "status": "paid",
     "checkOutTime": "16:40",
-    "createdAt": "2026-05-19T16:40:00.000Z"
+    "createdAt": getDate("2026-05-19T16:40:00.000Z")
   },
   {
     "id": "05a2e57e-74e5-48fa-ae42-4733e1d39946",
@@ -478,7 +480,7 @@
     "paymentMethod": "pix",
     "status": "paid",
     "checkOutTime": "11:00",
-    "createdAt": "2026-05-20T11:00:00.000Z"
+    "createdAt": getDate("2026-05-20T11:00:00.000Z")
   },
   {
     "id": "79474fc7-4fde-4528-a84c-8436e498c1d1",
@@ -491,7 +493,7 @@
     "paymentMethod": "credit_card",
     "status": "paid",
     "checkOutTime": "13:30",
-    "createdAt": "2026-05-20T13:30:00.000Z"
+    "createdAt": getDate("2026-05-20T13:30:00.000Z")
   },
   {
     "id": "b6551d91-ebc5-4271-b3af-c38d30a6677e",
@@ -504,7 +506,7 @@
     "paymentMethod": "pix",
     "status": "paid",
     "checkOutTime": "16:40",
-    "createdAt": "2026-05-20T16:40:00.000Z"
+    "createdAt": getDate("2026-05-20T16:40:00.000Z")
   },
   {
     "id": "1e70a39e-dbbe-40bb-8b38-f749366c118b",
@@ -517,6 +519,6 @@
     "paymentMethod": "pix",
     "status": "paid",
     "checkOutTime": "10:25",
-    "createdAt": "2026-05-21T10:25:00.000Z"
+    "createdAt": getDate("2026-05-21T10:25:00.000Z")
   }
 ]

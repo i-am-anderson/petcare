@@ -1,4 +1,6 @@
-[
+import getDate from "../utils/getData";
+
+export const manualTransactionsJson = [
   {
     "id": "c88f98c8-b2a1-435b-801a-f7e914040001",
     "type": "expense",
@@ -6,8 +8,8 @@
     "amount": 3500,
     "category": "Administrativo",
     "paymentMethod": "pix",
-    "date": "2026-05-01",
-    "createdAt": "2026-05-01T09:00:00.000Z"
+    "date": getDate("2026-05-01"),
+    "createdAt": getDate("2026-05-01T09:00:00.000Z")
   },
   {
     "id": "c88f98c8-b2a1-435b-801a-f7e914040002",
@@ -16,8 +18,8 @@
     "amount": 248,
     "category": "Fornecedores",
     "paymentMethod": "pix",
-    "date": "2026-05-02",
-    "createdAt": "2026-05-02T10:15:00.000Z"
+    "date": getDate("2026-05-02"),
+    "createdAt": getDate("2026-05-02T10:15:00.000Z")
   },
   {
     "id": "c88f98c8-b2a1-435b-801a-f7e914040003",
@@ -26,8 +28,8 @@
     "amount": 87,
     "category": "Manutenção",
     "paymentMethod": "cash",
-    "date": "2026-05-05",
-    "createdAt": "2026-05-05T08:30:00.000Z"
+    "date": getDate("2026-05-05"),
+    "createdAt": getDate("2026-05-05T08:30:00.000Z")
   },
   {
     "id": "c88f98c8-b2a1-435b-801a-f7e914040004",
@@ -36,8 +38,8 @@
     "amount": 215,
     "category": "Materiais",
     "paymentMethod": "credit_card",
-    "date": "2026-05-06",
-    "createdAt": "2026-05-06T11:00:00.000Z"
+    "date": getDate("2026-05-06"),
+    "createdAt": getDate("2026-05-06T11:00:00.000Z")
   },
   {
     "id": "c88f98c8-b2a1-435b-801a-f7e914040005",
@@ -46,8 +48,8 @@
     "amount": 318,
     "category": "Utilidades",
     "paymentMethod": "debit_card",
-    "date": "2026-05-08",
-    "createdAt": "2026-05-08T09:00:00.000Z"
+    "date": getDate("2026-05-08"),
+    "createdAt": getDate("2026-05-08T09:00:00.000Z")
   },
   {
     "id": "c88f98c8-b2a1-435b-801a-f7e914040006",
@@ -56,8 +58,8 @@
     "amount": 192,
     "category": "Fornecedores",
     "paymentMethod": "pix",
-    "date": "2026-05-09",
-    "createdAt": "2026-05-09T14:00:00.000Z"
+    "date": getDate("2026-05-09"),
+    "createdAt": getDate("2026-05-09T14:00:00.000Z")
   },
   {
     "id": "c88f98c8-b2a1-435b-801a-f7e914040007",
@@ -66,8 +68,8 @@
     "amount": 149,
     "category": "Utilidades",
     "paymentMethod": "debit_card",
-    "date": "2026-05-10",
-    "createdAt": "2026-05-10T10:00:00.000Z"
+    "date": getDate("2026-05-10"),
+    "createdAt": getDate("2026-05-10T10:00:00.000Z")
   },
   {
     "id": "c88f98c8-b2a1-435b-801a-f7e914040008",
@@ -76,8 +78,8 @@
     "amount": 310,
     "category": "Fornecedores",
     "paymentMethod": "pix",
-    "date": "2026-05-12",
-    "createdAt": "2026-05-12T09:30:00.000Z"
+    "date": getDate("2026-05-12"),
+    "createdAt": getDate("2026-05-12T09:30:00.000Z")
   },
   {
     "id": "c88f98c8-b2a1-435b-801a-f7e914040009",
@@ -86,8 +88,8 @@
     "amount": 64,
     "category": "Materiais",
     "paymentMethod": "cash",
-    "date": "2026-05-14",
-    "createdAt": "2026-05-14T08:45:00.000Z"
+    "date": getDate("2026-05-14"),
+    "createdAt": getDate("2026-05-14T08:45:00.000Z")
   },
   {
     "id": "c88f98c8-b2a1-435b-801a-f7e914040010",
@@ -96,8 +98,8 @@
     "amount": 180,
     "category": "Manutenção",
     "paymentMethod": "pix",
-    "date": "2026-05-16",
-    "createdAt": "2026-05-16T15:00:00.000Z"
+    "date": getDate("2026-05-16"),
+    "createdAt": getDate("2026-05-16T15:00:00.000Z")
   },
   {
     "id": "c88f98c8-b2a1-435b-801a-f7e914040011",
@@ -106,8 +108,8 @@
     "amount": 275,
     "category": "Fornecedores",
     "paymentMethod": "credit_card",
-    "date": "2026-05-19",
-    "createdAt": "2026-05-19T10:00:00.000Z"
+    "date": getDate("2026-05-19"),
+    "createdAt": getDate("2026-05-19T10:00:00.000Z")
   },
   {
     "id": "c88f98c8-b2a1-435b-801a-f7e914040012",
@@ -116,8 +118,8 @@
     "amount": 73,
     "category": "Manutenção",
     "paymentMethod": "cash",
-    "date": "2026-05-20",
-    "createdAt": "2026-05-20T08:30:00.000Z"
+    "date": getDate("2026-05-20"),
+    "createdAt": getDate("2026-05-20T08:30:00.000Z")
   },
   {
     "id": "c88f98c8-b2a1-435b-801a-f7e914040013",
@@ -126,8 +128,8 @@
     "amount": 68,
     "category": "Produtos",
     "paymentMethod": "cash",
-    "date": "2026-05-03",
-    "createdAt": "2026-05-03T11:30:00.000Z"
+    "date": getDate("2026-05-03"),
+    "createdAt": getDate("2026-05-03T11:30:00.000Z")
   },
   {
     "id": "c88f98c8-b2a1-435b-801a-f7e914040014",
@@ -136,8 +138,8 @@
     "amount": 89,
     "category": "Produtos",
     "paymentMethod": "pix",
-    "date": "2026-05-06",
-    "createdAt": "2026-05-06T16:00:00.000Z"
+    "date": getDate("2026-05-06"),
+    "createdAt": getDate("2026-05-06T16:00:00.000Z")
   },
   {
     "id": "c88f98c8-b2a1-435b-801a-f7e914040015",
@@ -146,8 +148,8 @@
     "amount": 74,
     "category": "Produtos",
     "paymentMethod": "pix",
-    "date": "2026-05-09",
-    "createdAt": "2026-05-09T10:30:00.000Z"
+    "date": getDate("2026-05-09"),
+    "createdAt": getDate("2026-05-09T10:30:00.000Z")
   },
   {
     "id": "c88f98c8-b2a1-435b-801a-f7e914040016",
@@ -156,8 +158,8 @@
     "amount": 58,
     "category": "Produtos",
     "paymentMethod": "debit_card",
-    "date": "2026-05-12",
-    "createdAt": "2026-05-12T14:00:00.000Z"
+    "date": getDate("2026-05-12"),
+    "createdAt": getDate("2026-05-12T14:00:00.000Z")
   },
   {
     "id": "c88f98c8-b2a1-435b-801a-f7e914040017",
@@ -166,8 +168,8 @@
     "amount": 82,
     "category": "Produtos",
     "paymentMethod": "pix",
-    "date": "2026-05-14",
-    "createdAt": "2026-05-14T16:30:00.000Z"
+    "date": getDate("2026-05-14"),
+    "createdAt": getDate("2026-05-14T16:30:00.000Z")
   },
   {
     "id": "c88f98c8-b2a1-435b-801a-f7e914040018",
@@ -176,8 +178,8 @@
     "amount": 37,
     "category": "Produtos",
     "paymentMethod": "cash",
-    "date": "2026-05-15",
-    "createdAt": "2026-05-15T12:00:00.000Z"
+    "date": getDate("2026-05-15"),
+    "createdAt": getDate("2026-05-15T12:00:00.000Z")
   },
   {
     "id": "c88f98c8-b2a1-435b-801a-f7e914040019",
@@ -186,8 +188,8 @@
     "amount": 29,
     "category": "Produtos",
     "paymentMethod": "pix",
-    "date": "2026-05-17",
-    "createdAt": "2026-05-17T10:45:00.000Z"
+    "date": getDate("2026-05-17"),
+    "createdAt": getDate("2026-05-17T10:45:00.000Z")
   },
   {
     "id": "c88f98c8-b2a1-435b-801a-f7e914040020",
@@ -196,8 +198,8 @@
     "amount": 55,
     "category": "Produtos",
     "paymentMethod": "credit_card",
-    "date": "2026-05-19",
-    "createdAt": "2026-05-19T15:30:00.000Z"
+    "date": getDate("2026-05-19"),
+    "createdAt": getDate("2026-05-19T15:30:00.000Z")
   },
   {
     "id": "c88f98c8-b2a1-435b-801a-f7e914040021",
@@ -206,8 +208,8 @@
     "amount": 75,
     "category": "Produtos",
     "paymentMethod": "cash",
-    "date": "2026-05-20",
-    "createdAt": "2026-05-20T11:00:00.000Z"
+    "date": getDate("2026-05-20"),
+    "createdAt": getDate("2026-05-20T11:00:00.000Z")
   },
   {
     "id": "c88f98c8-b2a1-435b-801a-f7e914040022",
@@ -216,7 +218,7 @@
     "amount": 22,
     "category": "Produtos",
     "paymentMethod": "pix",
-    "date": "2026-05-21",
-    "createdAt": "2026-05-21T13:45:00.000Z"
+    "date": getDate("2026-05-21"),
+    "createdAt": getDate("2026-05-21T13:45:00.000Z")
   }
 ]

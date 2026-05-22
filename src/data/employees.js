@@ -1,4 +1,6 @@
-[
+import getDate from "../utils/getData";
+
+export const employeesJson = [
   {
     "id": "e1b2c3d4-f5a6-7b8c-9d0e-1f2a3b4c5d6e",
     "name": "João Lemes",
@@ -12,7 +14,7 @@
     "workSchedule": "CLT 40h semanais",
     "crmv": "",
     "photo": "",
-    "createdAt": "2024-05-20T10:00:00Z"
+    "createdAt": getDate("2024-05-20T10:00:00Z")
   },
   {
     "id": "f2a3b4c5-d6e7-8f9a-0b1c-2d3e4f5a6b7c",
@@ -27,7 +29,7 @@
     "workSchedule": "CLT 40h semanais",
     "crmv": "",
     "photo": "",
-    "createdAt": "2024-05-20T10:00:00Z"
+    "createdAt": getDate("2024-05-20T10:00:00Z")
   },
   {
     "id": "a3b4c5d6-e7f8-9a0b-1c2d-3e4f5a6b7c8d",
@@ -42,7 +44,7 @@
     "workSchedule": "CLT 40h semanais",
     "crmv": "",
     "photo": "",
-    "createdAt": "2024-05-20T10:00:00Z"
+    "createdAt": getDate("2024-05-20T10:00:00Z")
   },
   {
     "id": "b4c5d6e7-f8a9-0b1c-2d3e-4f5a6b7c8d9e",
@@ -57,7 +59,7 @@
     "workSchedule": "Estágio",
     "crmv": "",
     "photo": "",
-    "createdAt": "2024-05-20T10:00:00Z"
+    "createdAt": getDate("2024-05-20T10:00:00Z")
   },
   {
     "id": "c5d6e7f8-a9b0-1c2d-3e4f-5a6b7c8d9e0f",
@@ -72,7 +74,7 @@
     "workSchedule": "CLT 40h semanais",
     "crmv": "",
     "photo": "",
-    "createdAt": "2024-05-20T10:00:00Z"
+    "createdAt": getDate("2024-05-20T10:00:00Z")
   },
   {
     "id": "d6e7f8a9-b0c1-2d3e-4f5a-6b7c8d9e0f1a",
@@ -87,7 +89,7 @@
     "workSchedule": "CLT 30h semanais",
     "crmv": "",
     "photo": "",
-    "createdAt": "2024-05-20T10:00:00Z"
+    "createdAt": getDate("2024-05-20T10:00:00Z")
   },
   {
     "id": "e7f8a9b0-c1d2-3e4f-5a6b-7c8d9e0f1a2b",
@@ -102,7 +104,7 @@
     "workSchedule": "CLT 40h semanais",
     "crmv": "",
     "photo": "",
-    "createdAt": "2024-05-20T10:00:00Z"
+    "createdAt": getDate("2024-05-20T10:00:00Z")
   },
   {
     "id": "f8a9b0c1-d2e3-4f5a-6b7c-8d9e0f1a2b3c",
@@ -117,7 +119,7 @@
     "workSchedule": "CLT 40h semanais",
     "crmv": "",
     "photo": "",
-    "createdAt": "2024-05-20T10:00:00Z"
+    "createdAt": getDate("2024-05-20T10:00:00Z")
   },
   {
     "id": "a9b0c1d2-e3f4-5a6b-7c8d-9e0f1a2b3c4d",
@@ -132,7 +134,7 @@
     "workSchedule": "Freelancer / Autônomo",
     "crmv": "",
     "photo": "",
-    "createdAt": "2024-05-20T10:00:00Z"
+    "createdAt": getDate("2024-05-20T10:00:00Z")
   },
   {
     "id": "b0c1d2e3-f4a5-5b6c-7d8e-9f0a1b2c3d4e",
@@ -147,6 +149,6 @@
     "workSchedule": "CLT 40h semanais",
     "crmv": "CRMV-SP 12345",
     "photo": "",
-    "createdAt": "2024-05-20T10:00:00Z"
+    "createdAt": getDate("2024-05-20T10:00:00Z")
   }
 ]

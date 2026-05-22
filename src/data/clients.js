@@ -1,4 +1,6 @@
-[
+import getDate from "../utils/getData";
+
+export const clientsJson = [
   {
     "id": "a1b2c3d4-e5f6-7a8b-9c0d-1e2f3a4b5c6d",
     "name": "Ana Maria Oliveira",
@@ -12,7 +14,7 @@
     "state": "SP",
     "zipCode": "01310-100",
     "notes": "Cliente preferencial",
-    "createdAt": "2026-05-21T11:15:14.692Z"
+    "createdAt": getDate("2026-05-21T11:15:14.692Z")
   },
   {
     "id": "b2c3d4e5-f6a7-8b9c-0d1e-2f3a4b5c6d7e",
@@ -27,7 +29,7 @@
     "state": "RJ",
     "zipCode": "22020-002",
     "notes": "",
-    "createdAt": "2026-05-21T11:15:14.692Z"
+    "createdAt": getDate("2026-05-21T11:15:14.692Z")
   },
   {
     "id": "c3d4e5f6-a7b8-9c0d-1e2f-3a4b5c6d7e8f",
@@ -42,7 +44,7 @@
     "state": "MG",
     "zipCode": "30180-100",
     "notes": "Contato por e-mail",
-    "createdAt": "2026-05-21T11:15:14.692Z"
+    "createdAt": getDate("2026-05-21T11:15:14.692Z")
   },
   {
     "id": "d4e5f6a7-b8c9-0d1e-2f3a-4b5c6d7e8f9a",
@@ -57,7 +59,7 @@
     "state": "RS",
     "zipCode": "90160-092",
     "notes": "",
-    "createdAt": "2026-05-21T11:15:14.692Z"
+    "createdAt": getDate("2026-05-21T11:15:14.692Z")
   },
   {
     "id": "e5f6a7b8-c9d0-1e2f-3a4b-5c6d7e8f9a0b",
@@ -72,7 +74,7 @@
     "state": "PR",
     "zipCode": "80020-300",
     "notes": "Interesse no produto X",
-    "createdAt": "2026-05-21T11:15:14.692Z"
+    "createdAt": getDate("2026-05-21T11:15:14.692Z")
   },
   {
     "id": "f6a7b8c9-d0e1-2f3a-4b5c-6d7e8f9a0b1c",
@@ -87,7 +89,7 @@
     "state": "BA",
     "zipCode": "40140-130",
     "notes": "",
-    "createdAt": "2026-05-21T11:15:14.692Z"
+    "createdAt": getDate("2026-05-21T11:15:14.692Z")
   },
   {
     "id": "a7b8c9d0-e1f2-3a4b-5c6d-7e8f9a0b1c2d",
@@ -102,7 +104,7 @@
     "state": "PE",
     "zipCode": "50050-000",
     "notes": "Estudante",
-    "createdAt": "2026-05-21T11:15:14.692Z"
+    "createdAt": getDate("2026-05-21T11:15:14.692Z")
   },
   {
     "id": "b8c9d0e1-f2a3-4b5c-6d7e-8f9a0b1c2d3e",
@@ -117,7 +119,7 @@
     "state": "DF",
     "zipCode": "70234-400",
     "notes": "",
-    "createdAt": "2026-05-21T11:15:14.692Z"
+    "createdAt": getDate("2026-05-21T11:15:14.692Z")
   },
   {
     "id": "c9d0e1f2-a3b4-4b5c-6d7e-8f9a0b1c2d3e",
@@ -132,7 +134,7 @@
     "state": "CE",
     "zipCode": "60165-121",
     "notes": "Solicitou catálogo",
-    "createdAt": "2026-05-21T11:15:14.692Z"
+    "createdAt": getDate("2026-05-21T11:15:14.692Z")
   },
   {
     "id": "d0e1f2a3-b4c5-4b5c-6d7e-8f9a0b1c2d3e",
@@ -147,7 +149,7 @@
     "state": "GA",
     "zipCode": "74823-130",
     "notes": "",
-    "createdAt": "2026-05-21T11:15:14.692Z"
+    "createdAt": getDate("2026-05-21T11:15:14.692Z")
   },
   {
     "id": "e1f2a3b4-c5d6-4b5c-6d7e-8f9a0b1c2d3e",
@@ -162,7 +164,7 @@
     "state": "ES",
     "zipCode": "29010-010",
     "notes": "",
-    "createdAt": "2026-05-21T11:15:14.692Z"
+    "createdAt": getDate("2026-05-21T11:15:14.692Z")
   },
   {
     "id": "f2a3b4c5-d6e7-4b5c-6d7e-8f9a0b1c2d3e",
@@ -177,7 +179,7 @@
     "state": "AM",
     "zipCode": "69050-010",
     "notes": "Ligar após as 18h",
-    "createdAt": "2026-05-21T11:15:14.692Z"
+    "createdAt": getDate("2026-05-21T11:15:14.692Z")
   },
   {
     "id": "a3b4c5d6-e7f8-4b5c-6d7e-8f9a0b1c2d3e",
@@ -192,7 +194,7 @@
     "state": "RN",
     "zipCode": "59090-000",
     "notes": "",
-    "createdAt": "2026-05-21T11:15:14.692Z"
+    "createdAt": getDate("2026-05-21T11:15:14.692Z")
   },
   {
     "id": "b4c5d6e7-f8a9-4b5c-6d7e-8f9a0b1c2d3e",
@@ -207,7 +209,7 @@
     "state": "SC",
     "zipCode": "88015-530",
     "notes": "Antigo fornecedor",
-    "createdAt": "2026-05-21T11:15:14.692Z"
+    "createdAt": getDate("2026-05-21T11:15:14.692Z")
   },
   {
     "id": "c5d6e7f8-a9b0-4b5c-6d7e-8f9a0b1c2d3e",
@@ -222,7 +224,7 @@
     "state": "MA",
     "zipCode": "65071-380",
     "notes": "",
-    "createdAt": "2026-05-21T11:15:14.692Z"
+    "createdAt": getDate("2026-05-21T11:15:14.692Z")
   },
   {
     "id": "d6e7f8a9-b0c1-4b5c-6d7e-8f9a0b1c2d3e",
@@ -237,7 +239,7 @@
     "state": "PB",
     "zipCode": "58045-010",
     "notes": "",
-    "createdAt": "2026-05-21T11:15:14.692Z"
+    "createdAt": getDate("2026-05-21T11:15:14.692Z")
   },
   {
     "id": "e7f8a9b0-c1d2-4b5c-6d7e-8f9a0b1c2d3e",
@@ -252,7 +254,7 @@
     "state": "SE",
     "zipCode": "49055-260",
     "notes": "Indicação de Carlos",
-    "createdAt": "2026-05-21T11:15:14.692Z"
+    "createdAt": getDate("2026-05-21T11:15:14.692Z")
   },
   {
     "id": "f8a9b0c1-d2e3-4b5c-6d7e-8f9a0b1c2d3e",
@@ -267,7 +269,7 @@
     "state": "PI",
     "zipCode": "64001-020",
     "notes": "",
-    "createdAt": "2026-05-21T11:15:14.692Z"
+    "createdAt": getDate("2026-05-21T11:15:14.692Z")
   },
   {
     "id": "a9b0c1d2-e3f4-4b5c-6d7e-8f9a0b1c2d3e",
@@ -282,7 +284,7 @@
     "state": "PA",
     "zipCode": "66035-115",
     "notes": "",
-    "createdAt": "2026-05-21T11:15:14.692Z"
+    "createdAt": getDate("2026-05-21T11:15:14.692Z")
   },
   {
     "id": "b0c1d2e3-f4a5-4b5c-6d7e-8f9a0b1c2d3e",
@@ -297,6 +299,6 @@
     "state": "MS",
     "zipCode": "79002-075",
     "notes": "Diretor Comercial",
-    "createdAt": "2026-05-21T11:15:14.692Z"
+    "createdAt": getDate("2026-05-21T11:15:14.692Z")
   }
 ]

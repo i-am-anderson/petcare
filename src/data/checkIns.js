@@ -1,4 +1,6 @@
-[
+import getDate from "../utils/getData";
+
+export const checkInsJson = [
   {
     "id": "7ad166e7-a6c2-4a17-ad57-e5a1de7684ea",
     "appointmentId": "981862fc-c24c-4612-bc35-ec7f46b652b8",
@@ -14,8 +16,8 @@
     "observations": "",
     "petCondition": "normal",
     "status": "checked_out",
-    "date": "2026-05-02T08:50:00.000Z",
-    "createdAt": "2026-05-02T08:50:00.000Z"
+    "date": getDate("2026-05-02T08:50:00.000Z"),
+    "createdAt": getDate("2026-05-02T08:50:00.000Z")
   },
   {
     "id": "90279a8a-10f7-46bc-b68f-c97c8399b731",
@@ -32,8 +34,8 @@
     "observations": "",
     "petCondition": "normal",
     "status": "checked_out",
-    "date": "2026-05-02T10:25:00.000Z",
-    "createdAt": "2026-05-02T10:25:00.000Z"
+    "date": getDate("2026-05-02T10:25:00.000Z"),
+    "createdAt": getDate("2026-05-02T10:25:00.000Z")
   },
   {
     "id": "a0b005ed-d29b-4829-8f3b-3a7f30bd9ffa",
@@ -50,8 +52,8 @@
     "observations": "",
     "petCondition": "normal",
     "status": "checked_out",
-    "date": "2026-05-02T14:10:00.000Z",
-    "createdAt": "2026-05-02T14:10:00.000Z"
+    "date": getDate("2026-05-02T14:10:00.000Z"),
+    "createdAt": getDate("2026-05-02T14:10:00.000Z")
   },
   {
     "id": "e56fa333-eefb-4c28-8b43-b350a969951d",
@@ -68,8 +70,8 @@
     "observations": "Apollo pode latir bastante, avisar clientes ao lado",
     "petCondition": "agitated",
     "status": "checked_out",
-    "date": "2026-05-05T08:30:00.000Z",
-    "createdAt": "2026-05-05T08:30:00.000Z"
+    "date": getDate("2026-05-05T08:30:00.000Z"),
+    "createdAt": getDate("2026-05-05T08:30:00.000Z")
   },
   {
     "id": "cb6ac1c0-5a2b-4e5b-8ce5-29aa896e09c0",
@@ -86,8 +88,8 @@
     "observations": "",
     "petCondition": "normal",
     "status": "checked_out",
-    "date": "2026-05-05T10:15:00.000Z",
-    "createdAt": "2026-05-05T10:15:00.000Z"
+    "date": getDate("2026-05-05T10:15:00.000Z"),
+    "createdAt": getDate("2026-05-05T10:15:00.000Z")
   },
   {
     "id": "481e607f-22d9-4578-99e9-9298bf61fcd4",
@@ -104,8 +106,8 @@
     "observations": "",
     "petCondition": "normal",
     "status": "checked_out",
-    "date": "2026-05-05T14:30:00.000Z",
-    "createdAt": "2026-05-05T14:30:00.000Z"
+    "date": getDate("2026-05-05T14:30:00.000Z"),
+    "createdAt": getDate("2026-05-05T14:30:00.000Z")
   },
   {
     "id": "72dbd6df-3ba3-425b-a399-463014d318e2",
@@ -122,8 +124,8 @@
     "observations": "",
     "petCondition": "normal",
     "status": "checked_out",
-    "date": "2026-05-06T09:20:00.000Z",
-    "createdAt": "2026-05-06T09:20:00.000Z"
+    "date": getDate("2026-05-06T09:20:00.000Z"),
+    "createdAt": getDate("2026-05-06T09:20:00.000Z")
   },
   {
     "id": "496248ca-4aaa-4216-a1dd-60ef49a252a3",
@@ -140,8 +142,8 @@
     "observations": "",
     "petCondition": "normal",
     "status": "checked_out",
-    "date": "2026-05-06T10:55:00.000Z",
-    "createdAt": "2026-05-06T10:55:00.000Z"
+    "date": getDate("2026-05-06T10:55:00.000Z"),
+    "createdAt": getDate("2026-05-06T10:55:00.000Z")
   },
   {
     "id": "01040d55-8412-4d07-b6d1-250c42c114ed",
@@ -158,8 +160,8 @@
     "observations": "Gata muito sensível, manipular com cuidado",
     "petCondition": "shy",
     "status": "checked_out",
-    "date": "2026-05-06T15:15:00.000Z",
-    "createdAt": "2026-05-06T15:15:00.000Z"
+    "date": getDate("2026-05-06T15:15:00.000Z"),
+    "createdAt": getDate("2026-05-06T15:15:00.000Z")
   },
   {
     "id": "975d5553-c807-4852-acbf-7d1be9ca54c7",
@@ -176,8 +178,8 @@
     "observations": "",
     "petCondition": "shy",
     "status": "checked_out",
-    "date": "2026-05-07T09:15:00.000Z",
-    "createdAt": "2026-05-07T09:15:00.000Z"
+    "date": getDate("2026-05-07T09:15:00.000Z"),
+    "createdAt": getDate("2026-05-07T09:15:00.000Z")
   },
   {
     "id": "1ae5c1a1-c563-4239-83e7-d0a5f8e37e5d",
@@ -194,8 +196,8 @@
     "observations": "",
     "petCondition": "normal",
     "status": "checked_out",
-    "date": "2026-05-07T10:25:00.000Z",
-    "createdAt": "2026-05-07T10:25:00.000Z"
+    "date": getDate("2026-05-07T10:25:00.000Z"),
+    "createdAt": getDate("2026-05-07T10:25:00.000Z")
   },
   {
     "id": "9dd38620-3680-4e7d-8589-d58b386d3c02",
@@ -212,8 +214,8 @@
     "observations": "",
     "petCondition": "shy",
     "status": "checked_out",
-    "date": "2026-05-07T16:05:00.000Z",
-    "createdAt": "2026-05-07T16:05:00.000Z"
+    "date": getDate("2026-05-07T16:05:00.000Z"),
+    "createdAt": getDate("2026-05-07T16:05:00.000Z")
   },
   {
     "id": "68196fb7-509e-41fc-8d1d-316966da59b9",
@@ -230,8 +232,8 @@
     "observations": "Pelo longo, atenção ao nó atrás das orelhas",
     "petCondition": "normal",
     "status": "checked_out",
-    "date": "2026-05-08T07:50:00.000Z",
-    "createdAt": "2026-05-08T07:50:00.000Z"
+    "date": getDate("2026-05-08T07:50:00.000Z"),
+    "createdAt": getDate("2026-05-08T07:50:00.000Z")
   },
   {
     "id": "735b09d8-71ed-43f6-9cc0-86f00dfa877d",
@@ -248,8 +250,8 @@
     "observations": "Gata muito sensível, manipular com cuidado",
     "petCondition": "shy",
     "status": "checked_out",
-    "date": "2026-05-08T10:15:00.000Z",
-    "createdAt": "2026-05-08T10:15:00.000Z"
+    "date": getDate("2026-05-08T10:15:00.000Z"),
+    "createdAt": getDate("2026-05-08T10:15:00.000Z")
   },
   {
     "id": "cf830b40-8199-4661-9213-1226db217e20",
@@ -266,8 +268,8 @@
     "observations": "",
     "petCondition": "normal",
     "status": "checked_out",
-    "date": "2026-05-08T12:50:00.000Z",
-    "createdAt": "2026-05-08T12:50:00.000Z"
+    "date": getDate("2026-05-08T12:50:00.000Z"),
+    "createdAt": getDate("2026-05-08T12:50:00.000Z")
   },
   {
     "id": "9b1398c8-cafe-4589-9c78-22cf5714e20b",
@@ -284,8 +286,8 @@
     "observations": "Cacau sempre fica ansiosa no início, melhora após 10 min",
     "petCondition": "normal",
     "status": "checked_out",
-    "date": "2026-05-09T09:15:00.000Z",
-    "createdAt": "2026-05-09T09:15:00.000Z"
+    "date": getDate("2026-05-09T09:15:00.000Z"),
+    "createdAt": getDate("2026-05-09T09:15:00.000Z")
   },
   {
     "id": "c8df0d1d-43f3-4048-833a-2caf0695802c",
@@ -302,8 +304,8 @@
     "observations": "Cliente pediu para secar bem antes de entregar",
     "petCondition": "normal",
     "status": "checked_out",
-    "date": "2026-05-09T11:10:00.000Z",
-    "createdAt": "2026-05-09T11:10:00.000Z"
+    "date": getDate("2026-05-09T11:10:00.000Z"),
+    "createdAt": getDate("2026-05-09T11:10:00.000Z")
   },
   {
     "id": "8f09aeae-ecd0-4739-b905-3096482ba69e",
@@ -320,8 +322,8 @@
     "observations": "Rottweiler dócil mas forte – usar guia reforçada",
     "petCondition": "agitated",
     "status": "checked_out",
-    "date": "2026-05-09T14:05:00.000Z",
-    "createdAt": "2026-05-09T14:05:00.000Z"
+    "date": getDate("2026-05-09T14:05:00.000Z"),
+    "createdAt": getDate("2026-05-09T14:05:00.000Z")
   },
   {
     "id": "85b4f049-b509-494a-8025-bb0ff7e63155",
@@ -338,8 +340,8 @@
     "observations": "Luke responde bem a comandos básicos",
     "petCondition": "normal",
     "status": "checked_out",
-    "date": "2026-05-09T16:10:00.000Z",
-    "createdAt": "2026-05-09T16:10:00.000Z"
+    "date": getDate("2026-05-09T16:10:00.000Z"),
+    "createdAt": getDate("2026-05-09T16:10:00.000Z")
   },
   {
     "id": "c9edb80d-8878-4fbb-97ef-3cbee958d1c6",
@@ -356,8 +358,8 @@
     "observations": "Cão grande, pode precisar de dois colaboradores no banho",
     "petCondition": "agitated",
     "status": "checked_out",
-    "date": "2026-05-12T09:10:00.000Z",
-    "createdAt": "2026-05-12T09:10:00.000Z"
+    "date": getDate("2026-05-12T09:10:00.000Z"),
+    "createdAt": getDate("2026-05-12T09:10:00.000Z")
   },
   {
     "id": "6474eea0-da76-49e9-9a6b-05559a756d33",
@@ -374,8 +376,8 @@
     "observations": "",
     "petCondition": "normal",
     "status": "checked_out",
-    "date": "2026-05-12T11:15:00.000Z",
-    "createdAt": "2026-05-12T11:15:00.000Z"
+    "date": getDate("2026-05-12T11:15:00.000Z"),
+    "createdAt": getDate("2026-05-12T11:15:00.000Z")
   },
   {
     "id": "4d698c2f-8fec-4758-be85-0151d865a077",
@@ -392,8 +394,8 @@
     "observations": "",
     "petCondition": "normal",
     "status": "checked_out",
-    "date": "2026-05-12T14:55:00.000Z",
-    "createdAt": "2026-05-12T14:55:00.000Z"
+    "date": getDate("2026-05-12T14:55:00.000Z"),
+    "createdAt": getDate("2026-05-12T14:55:00.000Z")
   },
   {
     "id": "1faf4a2a-5762-4c05-9bbb-0d82f9a05024",
@@ -410,8 +412,8 @@
     "observations": "",
     "petCondition": "normal",
     "status": "checked_out",
-    "date": "2026-05-13T08:30:00.000Z",
-    "createdAt": "2026-05-13T08:30:00.000Z"
+    "date": getDate("2026-05-13T08:30:00.000Z"),
+    "createdAt": getDate("2026-05-13T08:30:00.000Z")
   },
   {
     "id": "8f6a66d4-d5ac-4861-a88c-ffc78f980c6f",
@@ -428,8 +430,8 @@
     "observations": "",
     "petCondition": "normal",
     "status": "checked_out",
-    "date": "2026-05-13T10:40:00.000Z",
-    "createdAt": "2026-05-13T10:40:00.000Z"
+    "date": getDate("2026-05-13T10:40:00.000Z"),
+    "createdAt": getDate("2026-05-13T10:40:00.000Z")
   },
   {
     "id": "72471b92-5b37-436d-a95e-6073cdcedda8",
@@ -446,8 +448,8 @@
     "observations": "",
     "petCondition": "normal",
     "status": "checked_out",
-    "date": "2026-05-14T08:55:00.000Z",
-    "createdAt": "2026-05-14T08:55:00.000Z"
+    "date": getDate("2026-05-14T08:55:00.000Z"),
+    "createdAt": getDate("2026-05-14T08:55:00.000Z")
   },
   {
     "id": "ea38ef42-c4d6-49f4-bddc-d46116aec538",
@@ -464,8 +466,8 @@
     "observations": "",
     "petCondition": "normal",
     "status": "checked_out",
-    "date": "2026-05-14T11:20:00.000Z",
-    "createdAt": "2026-05-14T11:20:00.000Z"
+    "date": getDate("2026-05-14T11:20:00.000Z"),
+    "createdAt": getDate("2026-05-14T11:20:00.000Z")
   },
   {
     "id": "98c8ac59-80a1-4751-9d72-242158a97a59",
@@ -482,8 +484,8 @@
     "observations": "Gata muito sensível, manipular com cuidado",
     "petCondition": "shy",
     "status": "checked_out",
-    "date": "2026-05-14T15:15:00.000Z",
-    "createdAt": "2026-05-14T15:15:00.000Z"
+    "date": getDate("2026-05-14T15:15:00.000Z"),
+    "createdAt": getDate("2026-05-14T15:15:00.000Z")
   },
   {
     "id": "220a205c-0671-4260-ae38-df0c54708b17",
@@ -500,8 +502,8 @@
     "observations": "",
     "petCondition": "normal",
     "status": "checked_out",
-    "date": "2026-05-15T08:40:00.000Z",
-    "createdAt": "2026-05-15T08:40:00.000Z"
+    "date": getDate("2026-05-15T08:40:00.000Z"),
+    "createdAt": getDate("2026-05-15T08:40:00.000Z")
   },
   {
     "id": "a53f059c-20ae-49d3-add9-862f2a62d779",
@@ -518,8 +520,8 @@
     "observations": "",
     "petCondition": "normal",
     "status": "checked_out",
-    "date": "2026-05-15T10:25:00.000Z",
-    "createdAt": "2026-05-15T10:25:00.000Z"
+    "date": getDate("2026-05-15T10:25:00.000Z"),
+    "createdAt": getDate("2026-05-15T10:25:00.000Z")
   },
   {
     "id": "10fb3f81-1837-4e6d-9791-8d8d01a08a96",
@@ -536,8 +538,8 @@
     "observations": "Pelo longo, atenção ao nó atrás das orelhas",
     "petCondition": "normal",
     "status": "checked_out",
-    "date": "2026-05-15T14:20:00.000Z",
-    "createdAt": "2026-05-15T14:20:00.000Z"
+    "date": getDate("2026-05-15T14:20:00.000Z"),
+    "createdAt": getDate("2026-05-15T14:20:00.000Z")
   },
   {
     "id": "db48e820-cc51-4772-93ac-54e703c920de",
@@ -554,8 +556,8 @@
     "observations": "",
     "petCondition": "shy",
     "status": "checked_out",
-    "date": "2026-05-16T09:05:00.000Z",
-    "createdAt": "2026-05-16T09:05:00.000Z"
+    "date": getDate("2026-05-16T09:05:00.000Z"),
+    "createdAt": getDate("2026-05-16T09:05:00.000Z")
   },
   {
     "id": "63d5a85c-a4be-4a08-978e-856df28bef37",
@@ -572,8 +574,8 @@
     "observations": "",
     "petCondition": "normal",
     "status": "checked_out",
-    "date": "2026-05-16T10:50:00.000Z",
-    "createdAt": "2026-05-16T10:50:00.000Z"
+    "date": getDate("2026-05-16T10:50:00.000Z"),
+    "createdAt": getDate("2026-05-16T10:50:00.000Z")
   },
   {
     "id": "9cee4b9c-737f-40f8-b1fd-025e4bef14dd",
@@ -590,8 +592,8 @@
     "observations": "",
     "petCondition": "normal",
     "status": "checked_out",
-    "date": "2026-05-16T13:50:00.000Z",
-    "createdAt": "2026-05-16T13:50:00.000Z"
+    "date": getDate("2026-05-16T13:50:00.000Z"),
+    "createdAt": getDate("2026-05-16T13:50:00.000Z")
   },
   {
     "id": "7f251976-7da6-4452-9b4b-0240f767eb22",
@@ -608,8 +610,8 @@
     "observations": "",
     "petCondition": "shy",
     "status": "checked_out",
-    "date": "2026-05-19T09:15:00.000Z",
-    "createdAt": "2026-05-19T09:15:00.000Z"
+    "date": getDate("2026-05-19T09:15:00.000Z"),
+    "createdAt": getDate("2026-05-19T09:15:00.000Z")
   },
   {
     "id": "6e294369-26ea-411a-b986-69a192df6769",
@@ -626,8 +628,8 @@
     "observations": "Rottweiler dócil mas forte – usar guia reforçada",
     "petCondition": "agitated",
     "status": "checked_out",
-    "date": "2026-05-19T11:05:00.000Z",
-    "createdAt": "2026-05-19T11:05:00.000Z"
+    "date": getDate("2026-05-19T11:05:00.000Z"),
+    "createdAt": getDate("2026-05-19T11:05:00.000Z")
   },
   {
     "id": "5561e31d-3247-4893-b748-b822b8fbd4e1",
@@ -644,8 +646,8 @@
     "observations": "Aslam tem pele sensível, usar shampoo hipoalergênico",
     "petCondition": "normal",
     "status": "checked_out",
-    "date": "2026-05-19T14:55:00.000Z",
-    "createdAt": "2026-05-19T14:55:00.000Z"
+    "date": getDate("2026-05-19T14:55:00.000Z"),
+    "createdAt": getDate("2026-05-19T14:55:00.000Z")
   },
   {
     "id": "eae329b6-9728-4b06-b804-b0935bfd9fee",
@@ -662,8 +664,8 @@
     "observations": "",
     "petCondition": "normal",
     "status": "checked_out",
-    "date": "2026-05-20T09:45:00.000Z",
-    "createdAt": "2026-05-20T09:45:00.000Z"
+    "date": getDate("2026-05-20T09:45:00.000Z"),
+    "createdAt": getDate("2026-05-20T09:45:00.000Z")
   },
   {
     "id": "9b73fb6f-7d83-423c-b83c-fb337de7d097",
@@ -680,8 +682,8 @@
     "observations": "Cacau sempre fica ansiosa no início, melhora após 10 min",
     "petCondition": "normal",
     "status": "checked_out",
-    "date": "2026-05-20T11:15:00.000Z",
-    "createdAt": "2026-05-20T11:15:00.000Z"
+    "date": getDate("2026-05-20T11:15:00.000Z"),
+    "createdAt": getDate("2026-05-20T11:15:00.000Z")
   },
   {
     "id": "93cc85cc-06eb-4c82-9649-f6b3880ef9e0",
@@ -698,8 +700,8 @@
     "observations": "Luke responde bem a comandos básicos",
     "petCondition": "normal",
     "status": "checked_out",
-    "date": "2026-05-20T15:40:00.000Z",
-    "createdAt": "2026-05-20T15:40:00.000Z"
+    "date": getDate("2026-05-20T15:40:00.000Z"),
+    "createdAt": getDate("2026-05-20T15:40:00.000Z")
   },
   {
     "id": "7199dec8-148f-43f2-91e1-1b0f718170cc",
@@ -716,8 +718,8 @@
     "observations": "Cliente pediu para secar bem antes de entregar",
     "petCondition": "normal",
     "status": "checked_out",
-    "date": "2026-05-21T08:10:00.000Z",
-    "createdAt": "2026-05-21T08:10:00.000Z"
+    "date": getDate("2026-05-21T08:10:00.000Z"),
+    "createdAt": getDate("2026-05-21T08:10:00.000Z")
   },
   {
     "id": "abf67d8b-89c9-46d5-bc4e-5176d9d5985f",
@@ -734,8 +736,8 @@
     "observations": "",
     "petCondition": "normal",
     "status": "in_service",
-    "date": "2026-05-21T09:20:00.000Z",
-    "createdAt": "2026-05-21T09:20:00.000Z"
+    "date": getDate("2026-05-21T09:20:00.000Z"),
+    "createdAt": getDate("2026-05-21T09:20:00.000Z")
   },
   {
     "id": "3803b761-c920-4460-89b0-37a82a7464d1",
@@ -752,7 +754,7 @@
     "observations": "Cão grande, pode precisar de dois colaboradores no banho",
     "petCondition": "agitated",
     "status": "waiting",
-    "date": "2026-05-21T11:10:00.000Z",
-    "createdAt": "2026-05-21T11:10:00.000Z"
+    "date": getDate("2026-05-21T11:10:00.000Z"),
+    "createdAt": getDate("2026-05-21T11:10:00.000Z")
   }
 ]

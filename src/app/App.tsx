@@ -1,7 +1,8 @@
 import { RouterProvider } from "react-router";
-import { useEffect } from 'react';
+import { useEffect } from "react";
 import { router } from "./routes";
 import { useLocalStorage } from "./hooks/useLocalStorage";
+
 import {
   Client,
   Pet,
@@ -13,79 +14,126 @@ import {
   ServiceOrder,
   Transaction,
 } from "./types";
-import appointmentsJson from "../data/appointments.json";
-import clientsJson from "../data/clients.json";
-import employeesJson from "../data/employees.json";
-import petsJson from "../data/pets.json";
-import checkInsJson from "../data/checkIns.json";
-import manualTransactionsJson from "../data/manualTransactions.json";
-import petNotesJson from "../data/petNotes.json";
-import serviceOrdersJson from "../data/serviceOrders.json";
-import transactionsJson from "../data/transactions.json";
+
+import { appointmentsJson } from "../data/appointments";
+import { clientsJson } from "../data/clients";
+import { employeesJson } from "../data/employees";
+import { petsJson } from "../data/pets";
+import { checkInsJson } from "../data/checkIns";
+import { manualTransactionsJson } from "../data/manualTransactions";
+import { petNotesJson } from "../data/petNotes";
+import { serviceOrdersJson } from "../data/serviceOrders";
+import { transactionsJson } from "../data/transactions";
 
 export default function App() {
   const [clients, setClients] = useLocalStorage<Client[]>("clients", []);
   const [pets, setPets] = useLocalStorage<Pet[]>("pets", []);
-  const [employees, setEmployees] = useLocalStorage<Employee[]>(
-    "employees",
-    [],
-  );
+  const [employees, setEmployees] = useLocalStorage<Employee[]>("employees", []);
   const [appointments, setAppointments] = useLocalStorage<Appointment[]>(
     "appointments",
     [],
   );
+
   const [checkIns, setCheckIns] = useLocalStorage<CheckInRecord[]>(
     "checkIns",
     [],
   );
-  const [manualTransactions, setManualTransactions] = useLocalStorage<
-    ManualTransaction[]
-  >("manualTransactions", []);
+
+  const [manualTransactions, setManualTransactions] =
+    useLocalStorage<ManualTransaction[]>("manualTransactions", []);
+
   const [petNotes, setPetNotes] = useLocalStorage<PetNote[]>("petNotes", []);
+
   const [serviceOrders, setServiceOrders] = useLocalStorage<ServiceOrder[]>(
     "serviceOrders",
     [],
   );
+
   const [transactions, setTransactions] = useLocalStorage<Transaction[]>(
     "transactions",
     [],
   );
 
-  if (clients.length === 0) setClients([...clients, ...clientsJson]);
-
-  if (pets.length === 0) setPets([...pets, ...petsJson]);
-
-  if (employees.length === 0) setEmployees([...employees, ...employeesJson]);
-
-  if (appointments.length === 0)
-    setAppointments([...appointments, ...appointmentsJson]);
-
-  if (checkIns.length === 0) setCheckIns([...checkIns, ...checkInsJson]);
-
-  if (manualTransactions.length === 0) setManualTransactions([...manualTransactions, ...manualTransactionsJson]);
-
-  if (petNotes.length === 0) setPetNotes([...petNotes, ...petNotesJson]);
-
-  if (serviceOrders.length === 0) setServiceOrders([...serviceOrders, ...serviceOrdersJson]);
-
-  if (transactions.length === 0) setTransactions([...transactions, ...transactionsJson]);
+  const [date, setDate] = useLocalStorage<string>("date", "");
 
   useEffect(() => {
-    const handleKeyDown = (event) => {
-      if (event.ctrlKey && event.altKey && event.key === 'F5') {
+    const now = new Date().toISOString().split("T")[0];
+
+    const storageConfig = [
+      {
+        data: clients,
+        setData: setClients,
+        initial: clientsJson,
+      },
+      {
+        data: pets,
+        setData: setPets,
+        initial: petsJson,
+      },
+      {
+        data: employees,
+        setData: setEmployees,
+        initial: employeesJson,
+      },
+      {
+        data: appointments,
+        setData: setAppointments,
+        initial: appointmentsJson,
+      },
+      {
+        data: checkIns,
+        setData: setCheckIns,
+        initial: checkInsJson,
+      },
+      {
+        data: manualTransactions,
+        setData: setManualTransactions,
+        initial: manualTransactionsJson,
+      },
+      {
+        data: petNotes,
+        setData: setPetNotes,
+        initial: petNotesJson,
+      },
+      {
+        data: serviceOrders,
+        setData: setServiceOrders,
+        initial: serviceOrdersJson,
+      },
+      {
+        data: transactions,
+        setData: setTransactions,
+        initial: transactionsJson,
+      },
+    ];
+
+    const isNewDay = date !== now;
+
+    storageConfig.forEach(({ data, setData, initial }) => {
+      if (data.length === 0 || isNewDay) {
+        setData(initial);
+      }
+    });
+
+    if (isNewDay) {
+      setDate(now);
+    }
+  }, []);
+
+  useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.ctrlKey && event.altKey && event.key === "F5") {
         event.preventDefault();
-        
-        console.log('Limpando localStorage e recarregando...');
-        
+
         localStorage.clear();
         window.location.reload();
       }
     };
 
-    window.addEventListener('keydown', handleKeyDown);
+    window.addEventListener("keydown", handleKeyDown);
 
     return () => {
-      window.removeEventListener('keydown', handleKeyDown);
+      window.removeEventListener("keydown", handleKeyDown);
     };
   }, []);
 

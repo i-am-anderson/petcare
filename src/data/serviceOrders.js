@@ -1,4 +1,6 @@
-[
+import getDate from "../utils/getData";
+
+export const serviceOrdersJson = [
   {
     "id": "ae8defb6-31dc-4dbc-8b27-4518f4ffd3f4",
     "checkInId": "7ad166e7-a6c2-4a17-ad57-e5a1de7684ea",
@@ -10,7 +12,7 @@
     "employeeName": "Amanda Vieira Lima",
     "status": "completed",
     "internalNotes": "",
-    "createdAt": "2026-05-02T09:00:00.000Z",
+    "createdAt": getDate("2026-05-02T09:00:00.000Z"),
     "startTime": "09:00",
     "endTime": "11:00"
   },
@@ -25,7 +27,7 @@
     "employeeName": "Juliana das Dores Neves",
     "status": "completed",
     "internalNotes": "",
-    "createdAt": "2026-05-02T10:35:00.000Z",
+    "createdAt": getDate("2026-05-02T10:35:00.000Z"),
     "startTime": "10:35",
     "endTime": "11:35"
   },
@@ -40,7 +42,7 @@
     "employeeName": "Rodrigo Silva Prado",
     "status": "completed",
     "internalNotes": "",
-    "createdAt": "2026-05-02T14:20:00.000Z",
+    "createdAt": getDate("2026-05-02T14:20:00.000Z"),
     "startTime": "14:20",
     "endTime": "15:50"
   },
@@ -55,7 +57,7 @@
     "employeeName": "Rodrigo Silva Prado",
     "status": "completed",
     "internalNotes": "",
-    "createdAt": "2026-05-05T08:40:00.000Z",
+    "createdAt": getDate("2026-05-05T08:40:00.000Z"),
     "startTime": "08:40",
     "endTime": "10:10"
   },
@@ -70,7 +72,7 @@
     "employeeName": "Juliana das Dores Neves",
     "status": "completed",
     "internalNotes": "",
-    "createdAt": "2026-05-05T10:25:00.000Z",
+    "createdAt": getDate("2026-05-05T10:25:00.000Z"),
     "startTime": "10:25",
     "endTime": "11:10"
   },
@@ -85,7 +87,7 @@
     "employeeName": "Felipe Augusto Nogueira",
     "status": "completed",
     "internalNotes": "",
-    "createdAt": "2026-05-05T14:40:00.000Z",
+    "createdAt": getDate("2026-05-05T14:40:00.000Z"),
     "startTime": "14:40",
     "endTime": "16:40"
   },
@@ -100,7 +102,7 @@
     "employeeName": "Amanda Vieira Lima",
     "status": "completed",
     "internalNotes": "",
-    "createdAt": "2026-05-06T09:30:00.000Z",
+    "createdAt": getDate("2026-05-06T09:30:00.000Z"),
     "startTime": "09:30",
     "endTime": "11:30"
   },
@@ -115,7 +117,7 @@
     "employeeName": "Dra. Beatriz Mendes Castro",
     "status": "completed",
     "internalNotes": "",
-    "createdAt": "2026-05-06T11:05:00.000Z",
+    "createdAt": getDate("2026-05-06T11:05:00.000Z"),
     "startTime": "11:05",
     "endTime": "11:50"
   },
@@ -130,7 +132,7 @@
     "employeeName": "Juliana das Dores Neves",
     "status": "completed",
     "internalNotes": "",
-    "createdAt": "2026-05-06T15:25:00.000Z",
+    "createdAt": getDate("2026-05-06T15:25:00.000Z"),
     "startTime": "15:25",
     "endTime": "16:25"
   },
@@ -145,7 +147,7 @@
     "employeeName": "Bruno Henrique Fagundes",
     "status": "completed",
     "internalNotes": "",
-    "createdAt": "2026-05-07T09:25:00.000Z",
+    "createdAt": getDate("2026-05-07T09:25:00.000Z"),
     "startTime": "09:25",
     "endTime": "10:25"
   },
@@ -160,7 +162,7 @@
     "employeeName": "Rodrigo Silva Prado",
     "status": "completed",
     "internalNotes": "",
-    "createdAt": "2026-05-07T10:35:00.000Z",
+    "createdAt": getDate("2026-05-07T10:35:00.000Z"),
     "startTime": "10:35",
     "endTime": "12:05"
   },
@@ -175,7 +177,7 @@
     "employeeName": "Felipe Augusto Nogueira",
     "status": "completed",
     "internalNotes": "",
-    "createdAt": "2026-05-07T16:15:00.000Z",
+    "createdAt": getDate("2026-05-07T16:15:00.000Z"),
     "startTime": "16:15",
     "endTime": "17:45"
   },
@@ -190,7 +192,7 @@
     "employeeName": "Rodrigo Silva Prado",
     "status": "completed",
     "internalNotes": "",
-    "createdAt": "2026-05-08T08:00:00.000Z",
+    "createdAt": getDate("2026-05-08T08:00:00.000Z"),
     "startTime": "08:00",
     "endTime": "09:30"
   },
@@ -205,7 +207,7 @@
     "employeeName": "Dra. Beatriz Mendes Castro",
     "status": "completed",
     "internalNotes": "",
-    "createdAt": "2026-05-08T10:25:00.000Z",
+    "createdAt": getDate("2026-05-08T10:25:00.000Z"),
     "startTime": "10:25",
     "endTime": "11:10"
   },
@@ -220,7 +222,7 @@
     "employeeName": "Juliana das Dores Neves",
     "status": "completed",
     "internalNotes": "",
-    "createdAt": "2026-05-08T13:00:00.000Z",
+    "createdAt": getDate("2026-05-08T13:00:00.000Z"),
     "startTime": "13:00",
     "endTime": "14:00"
   },
@@ -235,7 +237,7 @@
     "employeeName": "Bruno Henrique Fagundes",
     "status": "completed",
     "internalNotes": "",
-    "createdAt": "2026-05-09T09:25:00.000Z",
+    "createdAt": getDate("2026-05-09T09:25:00.000Z"),
     "startTime": "09:25",
     "endTime": "10:25"
   },
@@ -250,7 +252,7 @@
     "employeeName": "Amanda Vieira Lima",
     "status": "completed",
     "internalNotes": "",
-    "createdAt": "2026-05-09T11:20:00.000Z",
+    "createdAt": getDate("2026-05-09T11:20:00.000Z"),
     "startTime": "11:20",
     "endTime": "13:20"
   },
@@ -265,7 +267,7 @@
     "employeeName": "Rodrigo Silva Prado",
     "status": "completed",
     "internalNotes": "",
-    "createdAt": "2026-05-09T14:15:00.000Z",
+    "createdAt": getDate("2026-05-09T14:15:00.000Z"),
     "startTime": "14:15",
     "endTime": "15:45"
   },
@@ -280,7 +282,7 @@
     "employeeName": "Juliana das Dores Neves",
     "status": "completed",
     "internalNotes": "",
-    "createdAt": "2026-05-09T16:20:00.000Z",
+    "createdAt": getDate("2026-05-09T16:20:00.000Z"),
     "startTime": "16:20",
     "endTime": "16:50"
   },
@@ -295,7 +297,7 @@
     "employeeName": "Amanda Vieira Lima",
     "status": "completed",
     "internalNotes": "",
-    "createdAt": "2026-05-12T09:20:00.000Z",
+    "createdAt": getDate("2026-05-12T09:20:00.000Z"),
     "startTime": "09:20",
     "endTime": "11:20"
   },
@@ -310,7 +312,7 @@
     "employeeName": "Dra. Beatriz Mendes Castro",
     "status": "completed",
     "internalNotes": "",
-    "createdAt": "2026-05-12T11:25:00.000Z",
+    "createdAt": getDate("2026-05-12T11:25:00.000Z"),
     "startTime": "11:25",
     "endTime": "12:10"
   },
@@ -325,7 +327,7 @@
     "employeeName": "Bruno Henrique Fagundes",
     "status": "completed",
     "internalNotes": "",
-    "createdAt": "2026-05-12T15:05:00.000Z",
+    "createdAt": getDate("2026-05-12T15:05:00.000Z"),
     "startTime": "15:05",
     "endTime": "16:05"
   },
@@ -340,7 +342,7 @@
     "employeeName": "Rodrigo Silva Prado",
     "status": "completed",
     "internalNotes": "",
-    "createdAt": "2026-05-13T08:40:00.000Z",
+    "createdAt": getDate("2026-05-13T08:40:00.000Z"),
     "startTime": "08:40",
     "endTime": "10:10"
   },
@@ -355,7 +357,7 @@
     "employeeName": "Juliana das Dores Neves",
     "status": "completed",
     "internalNotes": "",
-    "createdAt": "2026-05-13T10:50:00.000Z",
+    "createdAt": getDate("2026-05-13T10:50:00.000Z"),
     "startTime": "10:50",
     "endTime": "11:50"
   },
@@ -370,7 +372,7 @@
     "employeeName": "Bruno Henrique Fagundes",
     "status": "completed",
     "internalNotes": "",
-    "createdAt": "2026-05-14T09:05:00.000Z",
+    "createdAt": getDate("2026-05-14T09:05:00.000Z"),
     "startTime": "09:05",
     "endTime": "09:50"
   },
@@ -385,7 +387,7 @@
     "employeeName": "Amanda Vieira Lima",
     "status": "completed",
     "internalNotes": "",
-    "createdAt": "2026-05-14T11:30:00.000Z",
+    "createdAt": getDate("2026-05-14T11:30:00.000Z"),
     "startTime": "11:30",
     "endTime": "13:30"
   },
@@ -400,7 +402,7 @@
     "employeeName": "Juliana das Dores Neves",
     "status": "completed",
     "internalNotes": "",
-    "createdAt": "2026-05-14T15:25:00.000Z",
+    "createdAt": getDate("2026-05-14T15:25:00.000Z"),
     "startTime": "15:25",
     "endTime": "15:55"
   },
@@ -415,7 +417,7 @@
     "employeeName": "Rodrigo Silva Prado",
     "status": "completed",
     "internalNotes": "",
-    "createdAt": "2026-05-15T08:50:00.000Z",
+    "createdAt": getDate("2026-05-15T08:50:00.000Z"),
     "startTime": "08:50",
     "endTime": "10:20"
   },
@@ -430,7 +432,7 @@
     "employeeName": "Juliana das Dores Neves",
     "status": "completed",
     "internalNotes": "",
-    "createdAt": "2026-05-15T10:35:00.000Z",
+    "createdAt": getDate("2026-05-15T10:35:00.000Z"),
     "startTime": "10:35",
     "endTime": "11:35"
   },
@@ -445,7 +447,7 @@
     "employeeName": "Amanda Vieira Lima",
     "status": "completed",
     "internalNotes": "",
-    "createdAt": "2026-05-15T14:30:00.000Z",
+    "createdAt": getDate("2026-05-15T14:30:00.000Z"),
     "startTime": "14:30",
     "endTime": "16:30"
   },
@@ -460,7 +462,7 @@
     "employeeName": "Felipe Augusto Nogueira",
     "status": "completed",
     "internalNotes": "",
-    "createdAt": "2026-05-16T09:15:00.000Z",
+    "createdAt": getDate("2026-05-16T09:15:00.000Z"),
     "startTime": "09:15",
     "endTime": "10:45"
   },
@@ -475,7 +477,7 @@
     "employeeName": "Bruno Henrique Fagundes",
     "status": "completed",
     "internalNotes": "",
-    "createdAt": "2026-05-16T11:00:00.000Z",
+    "createdAt": getDate("2026-05-16T11:00:00.000Z"),
     "startTime": "11:00",
     "endTime": "12:00"
   },
@@ -490,7 +492,7 @@
     "employeeName": "Dra. Beatriz Mendes Castro",
     "status": "completed",
     "internalNotes": "",
-    "createdAt": "2026-05-16T14:00:00.000Z",
+    "createdAt": getDate("2026-05-16T14:00:00.000Z"),
     "startTime": "14:00",
     "endTime": "14:45"
   },
@@ -505,7 +507,7 @@
     "employeeName": "Juliana das Dores Neves",
     "status": "completed",
     "internalNotes": "",
-    "createdAt": "2026-05-19T09:25:00.000Z",
+    "createdAt": getDate("2026-05-19T09:25:00.000Z"),
     "startTime": "09:25",
     "endTime": "10:25"
   },
@@ -520,7 +522,7 @@
     "employeeName": "Rodrigo Silva Prado",
     "status": "completed",
     "internalNotes": "",
-    "createdAt": "2026-05-19T11:15:00.000Z",
+    "createdAt": getDate("2026-05-19T11:15:00.000Z"),
     "startTime": "11:15",
     "endTime": "13:15"
   },
@@ -535,7 +537,7 @@
     "employeeName": "Felipe Augusto Nogueira",
     "status": "completed",
     "internalNotes": "",
-    "createdAt": "2026-05-19T15:05:00.000Z",
+    "createdAt": getDate("2026-05-19T15:05:00.000Z"),
     "startTime": "15:05",
     "endTime": "16:35"
   },
@@ -550,7 +552,7 @@
     "employeeName": "Bruno Henrique Fagundes",
     "status": "completed",
     "internalNotes": "",
-    "createdAt": "2026-05-20T09:55:00.000Z",
+    "createdAt": getDate("2026-05-20T09:55:00.000Z"),
     "startTime": "09:55",
     "endTime": "10:55"
   },
@@ -565,7 +567,7 @@
     "employeeName": "Amanda Vieira Lima",
     "status": "completed",
     "internalNotes": "",
-    "createdAt": "2026-05-20T11:25:00.000Z",
+    "createdAt": getDate("2026-05-20T11:25:00.000Z"),
     "startTime": "11:25",
     "endTime": "13:25"
   },
@@ -580,7 +582,7 @@
     "employeeName": "Dra. Beatriz Mendes Castro",
     "status": "completed",
     "internalNotes": "",
-    "createdAt": "2026-05-20T15:50:00.000Z",
+    "createdAt": getDate("2026-05-20T15:50:00.000Z"),
     "startTime": "15:50",
     "endTime": "16:35"
   },
@@ -595,7 +597,7 @@
     "employeeName": "Amanda Vieira Lima",
     "status": "completed",
     "internalNotes": "",
-    "createdAt": "2026-05-21T08:20:00.000Z",
+    "createdAt": getDate("2026-05-21T08:20:00.000Z"),
     "startTime": "08:20",
     "endTime": "10:20"
   },
@@ -610,7 +612,7 @@
     "employeeName": "Juliana das Dores Neves",
     "status": "in_progress",
     "internalNotes": "",
-    "createdAt": "2026-05-21T09:30:00.000Z",
+    "createdAt": getDate("2026-05-21T09:30:00.000Z"),
     "startTime": "09:30"
   },
   {
@@ -624,6 +626,6 @@
     "employeeName": "Rodrigo Silva Prado",
     "status": "pending",
     "internalNotes": "",
-    "createdAt": "2026-05-21T11:20:00.000Z"
+    "createdAt": getDate("2026-05-21T11:20:00.000Z")
   }
 ]
