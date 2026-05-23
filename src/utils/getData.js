@@ -5,7 +5,7 @@ const getDate = (date) => {
 
   const diffDays = Math.floor(
     (Date.now() - BASE_DATE.getTime()) / (1000 * 60 * 60 * 24)
-  );
+  ) - 1;
 
   originalDate.setDate(originalDate.getDate() + diffDays);
 

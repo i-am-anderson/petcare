@@ -5,7 +5,7 @@ import { router } from "./routes";
 export default function App() {
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
-      if (event.ctrlKey && event.altKey && event.key === "F5") {
+      if (event.ctrlKey && event.shiftKey && event.key === "F5") {
         event.preventDefault();
         console.log("Limpando localStorage e recarregando...");
         localStorage.clear();
